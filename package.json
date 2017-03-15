@@ -1,0 +1,19 @@
+{
+  "name": "pelias-transit-loader",
+  "version": "1.0.0",
+  "description": "Import Stops, Intersections, P&Rs, TCs, etc... related to transit",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "purcellf (based off of Delaware Schools from trescube)",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^1.2.0",
+    "pelias-dbclient": "^2.0.0",
+    "pelias-model": "^4.5.1",
+    "pelias-wof-admin-lookup": "^3.1.2",
+    "request": "^2.81.0",
+    "through2": "^2.0.3"
+  }
+}
