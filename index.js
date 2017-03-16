@@ -90,7 +90,7 @@ request('https://data.delaware.gov/api/views/wky5-77bt/rows.csv?accessType=DOWNL
   .pipe(through2.obj(extractLatLon))
   .pipe(through2.obj(parseAddress))
   .pipe(through2.obj(createDocument))
-  .pipe(adminLookupStream.create())
+  //.pipe(adminLookupStream.create())
   .pipe(model.createDocumentMapperStream())
   .pipe(dbclient())
   .on('finish', function() {
