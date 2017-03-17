@@ -82,10 +82,14 @@ function createDocument(record, _, callback) {
   callback(null, doc);
 }
 
+console.log(process.argv.slice(1))
 
-var args = parameters.interpretUserArgs(process.argv.slice( 2 ));
+var f = process.argv.slice( 2 );
+var args = parameters.interpretUserArgs(f)
 var files = parameters.getFileList(peliasConfig, args);
+console.log(f);
 console.log(files);
+
 
 /*
 let count = 0;
