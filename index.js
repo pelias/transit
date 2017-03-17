@@ -1,5 +1,8 @@
 'use strict';
 
+var peliasConfig = require( 'pelias-config' ).generate(require('./schema'));
+var parameters = require( './lib/parameters' );
+
 const csvParse = require( 'csv-parse' );
 const through2 = require('through2');
 const request = require('request');
@@ -79,6 +82,12 @@ function createDocument(record, _, callback) {
   callback(null, doc);
 }
 
+
+var args = parameters.interpretUserArgs(process.argv.slice( 2 ));
+var files = parameters.getFileList(peliasConfig, args);
+console.log(files);
+
+/*
 let count = 0;
 
 request('https://data.delaware.gov/api/views/wky5-77bt/rows.csv?accessType=DOWNLOAD')
@@ -90,9 +99,11 @@ request('https://data.delaware.gov/api/views/wky5-77bt/rows.csv?accessType=DOWNL
   .pipe(through2.obj(extractLatLon))
   .pipe(through2.obj(parseAddress))
   .pipe(through2.obj(createDocument))
-  //.pipe(adminLookupStream.create())
+  // .pipe(adminLookupStream.create())
   .pipe(model.createDocumentMapperStream())
   .pipe(dbclient())
   .on('finish', function() {
     console.log(`added ${count} schools`);
   });
+
+*/
