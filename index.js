@@ -1,6 +1,16 @@
 'use strict';
 
-var peliasConfig = require( 'pelias-config' ).generate(require('./schema'));
+
+var peliasConfig = require('pelias-config');
+peliasConfig.generate();
+
+
+/*
+peliasConfig.defaults.imports.tranist = {};
+var schema = require('./schema');
+peliasConfig.generate(schema);
+
+
 var parameters = require( './lib/parameters' );
 
 const csvParse = require( 'csv-parse' );
@@ -10,6 +20,7 @@ const request = require('request');
 const adminLookupStream = require('pelias-wof-admin-lookup');
 const model = require( 'pelias-model' );
 const dbclient = require( 'pelias-dbclient' );
+
 
 // extracts 12.121212,-21.212121 from "some text (12.121212, -21.212121)"
 const latLonRegex = /.*\((-?\d+\.\d+), (-?\d+\.\d+)\)$/;
