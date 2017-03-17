@@ -87,8 +87,10 @@ console.log(process.argv.slice(1))
 var f = process.argv.slice( 2 );
 var args = parameters.interpretUserArgs(f)
 var files = parameters.getFileList(peliasConfig, args);
+var admin = peliasConfig.imports.openaddresses.hasOwnProperty('adminLookup')
 console.log(f);
 console.log(files);
+console.log(admin);
 
 
 /*
