@@ -13,6 +13,7 @@ if(transitConfig && error == null) {
     console.log(transitConfig);
 } else {
     console.log("transit config error: " + error);
+    process.exit(0);
 }
 
 
