@@ -16,6 +16,6 @@ const arrayObj = Joi.object().keys({
 module.exports = Joi.object().keys({
     datapath: Joi.string(),
     adminLookup: Joi.boolean(),
-    import: Joi.array().min(1).items(arrayObj),
+    import: Joi.array().min(2).items(arrayObj),
 }).requiredKeys('datapath', 'adminLookup', 'import').unknown(true);
 
