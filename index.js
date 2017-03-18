@@ -1,8 +1,19 @@
 'use strict';
 
+const _ = require('lodash');
+const Joi = require('joi');
 
-var peliasConfig = require('pelias-config');
-peliasConfig.generate();
+const schema = require('./schema');
+
+
+var peliasConfig = require('pelias-config').generate(true);
+var transitConfig = _.get(peliasConfig, 'imports.transit');
+var isValid = Joi.validate(transitConfig, schema);
+if(transitConfig && isValid) {
+    console.log(transitConfig);
+} else {
+    console.log("transit config error: " + isValid);
+}
 
 
 /*

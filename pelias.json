@@ -1,0 +1,52 @@
+{
+  "imports": {
+    "transit": {
+      "datapath": "/mnt/pelias/transit",
+      "adminLookup": true,
+      "import": [{
+        "filenadme": "or-wa.pbf"
+      }]
+    },
+    "whosonfirst": {
+      "datapath": "/mnt/pelias/whosonfirst",
+      "importVenues": false
+    },
+    "polyline": {
+      "datapath": "/mnt/pelias/polyline",
+      "adminLookup": true,
+      "files": ["road_network"]
+    },
+    "geonames": {
+      "datapath": "./data",
+      "adminLookup": true,
+      "countryCode": "US"
+    },
+    "openstreetmap": {
+      "datapath": "/mnt/pelias/openstreetmap",
+      "leveldbpath": "/tmp",
+      "adminLookup": true,
+      "import": [{
+        "filename": "or-wa.pbf"
+      }]
+    },
+    "openaddresses": {
+      "deduplicate": false,
+      "datapath": "/mnt/pelias/openaddresses",
+      "adminLookup": true,
+      "files": [
+        "us/or/city_of_salem.csv",
+        "us/or/gresham.csv",
+        "us/or/marion_and_polk.csv",
+        "us/or/oregon_city.csv",
+        "us/or/washington.csv",
+        "us/or/clackamas.csv",
+        "us/or/hood_river.csv",
+        "us/or/multnomah.csv",
+        "us/or/portland.csv",
+        "us/or/yarnhill.csv",
+        "us/wa/city_of_richland.csv",
+        "us/wa/clark.csv"
+      ]
+    }
+  }
+}

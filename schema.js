@@ -2,18 +2,20 @@
 
 const Joi = require('joi');
 
+const arrayObj = Joi.object().keys({
+    filename: Joi.string().required(),
+    type: Joi.string().required(),
+    agency_id: Joi.string().required(),
+}).requiredKeys('filename', 'agency_id', 'type');
+
 // Schema Configuration
 // datapath: string (required)
 // files: array of strings
 // deduplicate: boolean
 // adminLookup: boolean
 module.exports = Joi.object().keys({
-  imports: Joi.object().keys({
-    transit: Joi.object().keys({
-      files: Joi.array().items(Joi.string()),
-      datapath: Joi.string(),
-      deduplicate: Joi.boolean(),
-      adminLookup: Joi.boolean()
-    }).requiredKeys('datapath').unknown(false)
-  }).requiredKeys('transit').unknown(true)
-}).requiredKeys('imports').unknown(true);
+    datapath: Joi.string(),
+    adminLookup: Joi.boolean(),
+    import: Joi.array().min(1).items(arrayObj),
+}).requiredKeys('datapath', 'adminLookup', 'import').unknown(true);
+
