@@ -9,25 +9,24 @@ const model = require('pelias-model');
 const dbclient = require('pelias-dbclient');
 
 const schema = require('./schema');
-
+const utils = require('./lib/utils');
+//import * as utils from './lib/utils';
 
 // step 1: make sure we have valid
 var peliasConfig = require('pelias-config').generate(true);
 var transitConfig = _.get(peliasConfig, 'imports.transit');
 const {error, value} = Joi.validate(transitConfig, schema);
-if(transitConfig && error == null) {
-    // debug - console.log(transitConfig);
-} else {
+if(error || transitConfig == undefined) {
     console.log("transit config error: " + error);
     process.exit(0);
 }
 
+// console.log(transitConfig);
+utils.startTiming();
 
-
-
+/*
 const through2 = require('through2');
 const request = require('request');
-
 
 
 

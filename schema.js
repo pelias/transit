@@ -4,7 +4,7 @@ const Joi = require('joi');
 
 const arrayObj = Joi.object().keys({
     filename: Joi.string().required(),
-    type: Joi.string().required(),
+    type: Joi.string().required().valid('stops', 'pr', 'tc', 'intersection'),
     agencyId: Joi.string().required(),
 }).requiredKeys('filename', 'agencyId', 'type');
 
