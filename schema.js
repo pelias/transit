@@ -5,8 +5,8 @@ const Joi = require('joi');
 const arrayObj = Joi.object().keys({
     filename: Joi.string().required(),
     type: Joi.string().required(),
-    agency_id: Joi.string().required(),
-}).requiredKeys('filename', 'agency_id', 'type');
+    agencyId: Joi.string().required(),
+}).requiredKeys('filename', 'agencyId', 'type');
 
 // Schema Configuration
 // datapath: string (required)

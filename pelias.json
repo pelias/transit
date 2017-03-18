@@ -4,7 +4,9 @@
       "datapath": "/mnt/pelias/transit",
       "adminLookup": true,
       "import": [{
-        "filenadme": "or-wa.pbf"
+        "filename": "tm_stops.txt",
+        "type": "stops",
+        "agencyId" : "TRIMET"
       }]
     },
     "whosonfirst": {

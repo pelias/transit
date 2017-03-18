@@ -8,11 +8,11 @@ const schema = require('./schema');
 
 var peliasConfig = require('pelias-config').generate(true);
 var transitConfig = _.get(peliasConfig, 'imports.transit');
-var isValid = Joi.validate(transitConfig, schema);
-if(transitConfig && isValid) {
+const {error, value} = Joi.validate(transitConfig, schema);
+if(transitConfig && error == null) {
     console.log(transitConfig);
 } else {
-    console.log("transit config error: " + isValid);
+    console.log("transit config error: " + error);
 }
 
 
