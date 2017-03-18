@@ -10,7 +10,7 @@ const dbclient = require('pelias-dbclient');
 
 const schema = require('./schema');
 const utils = require('./lib/utils');
-//import * as utils from './lib/utils';
+const stops = require('./lib/stops');
 
 // step 1: make sure we have valid
 var peliasConfig = require('pelias-config').generate(true);
@@ -23,6 +23,8 @@ if(error || transitConfig == undefined) {
 
 // console.log(transitConfig);
 utils.startTiming();
+stops.parseGtfsStops();
+
 
 /*
 const through2 = require('through2');
