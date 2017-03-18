@@ -2,36 +2,33 @@
 
 const _ = require('lodash');
 const Joi = require('joi');
+const csvParse = require('csv-parse');
+
+const adminLookupStream = require('pelias-wof-admin-lookup');
+const model = require('pelias-model');
+const dbclient = require('pelias-dbclient');
 
 const schema = require('./schema');
 
 
+// step 1: make sure we have valid
 var peliasConfig = require('pelias-config').generate(true);
 var transitConfig = _.get(peliasConfig, 'imports.transit');
 const {error, value} = Joi.validate(transitConfig, schema);
 if(transitConfig && error == null) {
-    console.log(transitConfig);
+    // debug - console.log(transitConfig);
 } else {
     console.log("transit config error: " + error);
     process.exit(0);
 }
 
 
-/*
-peliasConfig.defaults.imports.tranist = {};
-var schema = require('./schema');
-peliasConfig.generate(schema);
 
 
-var parameters = require( './lib/parameters' );
-
-const csvParse = require( 'csv-parse' );
 const through2 = require('through2');
 const request = require('request');
 
-const adminLookupStream = require('pelias-wof-admin-lookup');
-const model = require( 'pelias-model' );
-const dbclient = require( 'pelias-dbclient' );
+
 
 
 // extracts 12.121212,-21.212121 from "some text (12.121212, -21.212121)"
