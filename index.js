@@ -5,7 +5,7 @@ const Joi = require('joi');
 
 const schema = require('./schema');
 const utils = require('./lib/utils');
-const parser = require('./lib/parser');
+const loader = require('./lib/loader');
 
 
 // step 1: make sure we have valid transit configuration
@@ -20,9 +20,9 @@ if(error || transitConfig == undefined) {
 // step 2: let's start loading Pelias...
 utils.startTiming();
 
-// step 3: parse the transit feeds
-parser.setTransitConfig(transitConfig);
-transitConfig.files.forEach(parser.parse);
+// step 3: load the transit feeds
+loader.setTransitConfig(transitConfig);
+transitConfig.files.forEach(loader.load);
 
 
 /*
@@ -34,7 +34,7 @@ const request = require('request');
 // extracts 12.121212,-21.212121 from "some text (12.121212, -21.212121)"
 const latLonRegex = /.*\((-?\d+\.\d+), (-?\d+\.\d+)\)$/;
 
-// can parse number and street from the following address formats:
+// can load number and street from the following address formats:
 // - 123 Main Street
 // - 123A Main Street
 // - 123-A Main Street

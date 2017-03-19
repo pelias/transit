@@ -13,6 +13,7 @@
     "decompress": "^4.0.0",
     "pelias-config": "^2.7.1",
     "glob": "^7.0.0",
+    "sleep": "^1.0.0",
     "joi": "^10.1.0",
     "lodash": "^4.10.0",
     "minimist": "1.2.0",
