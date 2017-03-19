@@ -10,6 +10,11 @@
           "filename": "/ott/loader/gtfs/cache/TRIMET.zip",
           "type": "stops",
           "agencyId" : "TRIMET"
+        },
+        {
+          "filename": "/ott/loader/gtfs/cache/C-TRAN.zip",
+          "type": "stops",
+          "agencyId" : "C-TRAN"
         }
       ]
     },
