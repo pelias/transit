@@ -1,7 +1,7 @@
 {
   "name": "pelias-transit-loader",
   "version": "0.1.0",
-  "description": "Import Stops, Intersections, P&Rs, TCs, etc... related to transit",
+  "description": "Import Stops, Intersections, P&Rs, TCs, other landmark data related to transit, etc...",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -13,15 +13,12 @@
     "csv-parse": "^1.2.0",
     "decompress": "^4.0.0",
     "pelias-config": "^2.7.1",
-    "glob": "^7.0.0",
     "sleep": "^1.0.0",
     "joi": "^10.1.0",
     "lodash": "^4.10.0",
-    "minimist": "1.2.0",
     "pelias-dbclient": "^2.0.0",
     "pelias-model": "^4.5.1",
     "pelias-wof-admin-lookup": "^3.1.2",
-    "request": "^2.81.0",
-    "through2": "^2.0.3"
+      "through2": "^2.0.3"
   }
 }
