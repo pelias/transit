@@ -13,7 +13,7 @@ var peliasConfig = require('pelias-config').generate(true);
 var transitConfig = _.get(peliasConfig, 'imports.transit');
 const {error, value} = Joi.validate(transitConfig, schema);
 if(error || transitConfig == undefined) {
-    utils.logger("transit config error: " + error);
+    utils.logger.error("transit config error: " + error);
     process.exit(0);
 }
 

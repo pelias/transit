@@ -1,8 +1,10 @@
 {
   "imports": {
+    "adminLookup" : {
+      "enabled" : true
+    },
     "transit": {
       "datapath": "/java/DEV/loader",
-      "adminLookup": true,
       "files": [
         {
           "filename": "/ott/loader/gtfs/cache/TRIMET.zip",

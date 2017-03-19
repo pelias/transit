@@ -17,5 +17,5 @@ module.exports = Joi.object().keys({
     datapath: Joi.string(),
     adminLookup: Joi.boolean(),
     files: Joi.array().min(1).items(arrayObj),
-}).requiredKeys('datapath', 'adminLookup', 'files').unknown(true);
+}).requiredKeys('datapath', 'files').unknown(true);
 
