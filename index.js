@@ -85,7 +85,6 @@ function parseAddress(record, _, callback) {
 
 function createDocument(record, _, callback) {
   const id = `${record.DistrictCode}-${record.SchoolCode}`;
-
   // formats '12345' as '12345' and '123456789' as '12345-6789'
   const formattedZip = record.Zip.match(zipRegex).slice(1).filter((e) => {return e;}).join('-');
 
