@@ -25,6 +25,10 @@ if(error || transitConfig == undefined) {
 utils.startTiming();
 stops.parseGtfsStops();
 
+transitConfig.files.forEach(function(i) {
+    console.log(i);
+});
+
 
 /*
 const through2 = require('through2');

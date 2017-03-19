@@ -1,13 +1,15 @@
 {
   "imports": {
     "transit": {
-      "datapath": "/mnt/pelias/transit",
+      "datapath": "/java/DEV/loader",
       "adminLookup": true,
-      "import": [{
-        "filename": "tm_stops.txt",
-        "type": "stops",
-        "agencyId" : "TRIMET"
-      }]
+      "files": [
+        {
+          "filename": "/ott/loader/gtfs/cache/TRIMET.zip",
+          "type": "stops",
+          "agencyId" : "TRIMET"
+        }
+      ]
     },
     "whosonfirst": {
       "datapath": "/mnt/pelias/whosonfirst",
