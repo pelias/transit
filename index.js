@@ -2,17 +2,13 @@
 
 const _ = require('lodash');
 const Joi = require('joi');
-const csvParse = require('csv-parse');
-
-const adminLookupStream = require('pelias-wof-admin-lookup');
-const model = require('pelias-model');
-const dbclient = require('pelias-dbclient');
 
 const schema = require('./schema');
 const utils = require('./lib/utils');
 const parser = require('./lib/parser');
 
-// step 1: make sure we have valid
+
+// step 1: make sure we have valid transit configuration
 var peliasConfig = require('pelias-config').generate(true);
 var transitConfig = _.get(peliasConfig, 'imports.transit');
 const {error, value} = Joi.validate(transitConfig, schema);
@@ -21,11 +17,12 @@ if(error || transitConfig == undefined) {
     process.exit(0);
 }
 
-// console.log(transitConfig);
+// step 2: let's start loading Pelias...
 utils.startTiming();
+
+// step 3: parse the transit feeds
 parser.setTransitConfig(transitConfig);
 transitConfig.files.forEach(parser.parse);
-
 
 
 /*
@@ -104,16 +101,6 @@ function createDocument(record, _, callback) {
   console.log(doc);
   callback(null, doc);
 }
-
-console.log(process.argv.slice(1))
-
-var f = process.argv.slice( 2 );
-var args = parameters.interpretUserArgs(f)
-var files = parameters.getFileList(peliasConfig, args);
-var admin = peliasConfig.imports.openaddresses.hasOwnProperty('adminLookup')
-console.log(f);
-console.log(files);
-console.log(admin);
 
 
 /*

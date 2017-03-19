@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "csv-parse": "^1.2.0",
+    "decompress": "^4.0.0",
     "pelias-config": "^2.7.1",
     "glob": "^7.0.0",
     "joi": "^10.1.0",
