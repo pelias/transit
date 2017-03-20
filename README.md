@@ -1,22 +1,21 @@
 # pelias.loader
-Load transit landmarks into the Pelias geocoder
+Load transit landmarks into the Pelias geocoder.  Based on 
 
 
-### Setup with just ES:
+### Setup empty ES index with Pelias schema
+```javascript
+cd /srv/pelias_loader/projects/schema
+curl -XDELETE 'localhost:9200/pelias?pretty'
+node scripts/create_index.js
+cd -
+```
+
+### OR setup with just ES:
 ```javascript
 cd eleasticsearch
 bin/eleasticsearch
 curl -XDELETE 'localhost:9200/pelias?pretty'
 ```
-
-### OR - setup with Pelias install
-```javascript
-cd /srv/pelias_loader/projects/schema
-nohup node scripts/drop_index.js -f
-nohup node scripts/create_index.js
-cd -
-```
-
 
 ### To run:
 ```javascript
