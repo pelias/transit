@@ -1,9 +1,6 @@
 # pelias.loader
 Load transit landmarks into the Pelias geocoder
 
-This package is an example app for importing 3rd party data into a Pelias Elasticsearch instance.
-It uses the [Who's on First bundles](https://whosonfirst.mapzen.com/bundles/) for admin lookup (filling in city/county/state/etc for addresses).
-
 
 ### Setup with just ES:
 ```javascript
@@ -18,7 +15,7 @@ cd /srv/pelias_loader/projects/schema
 nohup node scripts/drop_index.js -f
 nohup node scripts/create_index.js
 cd -
-'
+```
 
 
 ### To run:
