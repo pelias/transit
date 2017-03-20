@@ -4,10 +4,10 @@
       "enabled" : false
     },
     "transit": {
-      "datapath": "/java/DEV/loader",
+      "datapath": "/mnt/pelias/transit",
       "files": [
         {
-          "filename": "/ott/loader/gtfs/cache/TRIMET.zip",
+          "filename": "TRIMET.zip",
           "type": "stops",
           "agencyId" : "TRIMET"
         }
