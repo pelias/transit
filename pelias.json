@@ -19,18 +19,15 @@
     },
     "polyline": {
       "datapath": "/mnt/pelias/polyline",
-      "adminLookup": true,
       "files": ["road_network"]
     },
     "geonames": {
       "datapath": "./data",
-      "adminLookup": true,
       "countryCode": "US"
     },
     "openstreetmap": {
       "datapath": "/mnt/pelias/openstreetmap",
       "leveldbpath": "/tmp",
-      "adminLookup": true,
       "import": [{
         "filename": "or-wa.pbf"
       }]
@@ -38,7 +35,6 @@
     "openaddresses": {
       "deduplicate": false,
       "datapath": "/mnt/pelias/openaddresses",
-      "adminLookup": true,
       "files": [
         "us/or/city_of_salem.csv",
         "us/or/gresham.csv",
