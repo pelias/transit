@@ -10,6 +10,7 @@
   "attribution" : "code based off of Delaware Schools from trescube https://github.com/trescube/delaware-schools-pelias-importer, as well as other Pelias loader projects",
   "license": "MIT",
   "dependencies": {
+      "combined-stream": "^1.0.5",
       "csv-parse": "^1.2.0",
       "decompress": "^4.0.0",
       "joi": "^10.1.0",
