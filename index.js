@@ -27,5 +27,4 @@ if(transitConfig == undefined || transitConfig.files == undefined) {
 utils.startTiming();
 
 // step 4: load each of the configured transit datasets
-loader.setTransitConfig(transitConfig);
-transitConfig.files.forEach(loader.load);
+loader.loadTransitFiles(transitConfig);
