@@ -7,9 +7,14 @@
       "datapath": "/mnt/pelias/transit",
       "files": [
         {
-          "filename": "TRIMET.zip",
-          "type": "stops",
+          "type" : "stops",
+          "filename" : "TRIMET-stops.txt",
           "agencyId" : "TRIMET"
+        },
+        {
+          "type" : "stops",
+          "filename" : "C-TRAN-stops.txt",
+          "agencyId" : "C-TRAN"
         }
       ]
     },
