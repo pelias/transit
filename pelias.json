@@ -1,7 +1,7 @@
 {
   "imports": {
     "adminLookup" : {
-      "enabled" : true
+      "enabled" : false
     },
     "transit": {
       "datapath": "/mnt/pelias/transit",
