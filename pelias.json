@@ -10,21 +10,21 @@
           "url" : "x",
           "layerId" : "stops",
           "filename" : "TRIMET-stops.txt",
-          "agencyId" : "TRIMET",
-          "agencyName" :  "TriMet"
+          "agencyId"   : "TRIMET",
+          "agencyName" : "TriMet"
         },
         {
           "layerId" : "stops",
           "filename" : "C-TRAN-stops.txt",
-          "agencyId" : "C-TRAN",
-          "agencyName" :  "C-TRAN"
+          "agencyId"   : "C-TRAN",
+          "agencyName" : "C-TRAN"
         },
         {
           "url" : "http://biketownpdx.socialbicycles.com/opendata/station_information.json",
           "layerId" : "bikeshare",
           "filename" : "station_information.json",
-          "agencyId" : "BIKETOWN",
-          "agencyName" :  "BIKETOWN"
+          "agencyId"   : "BIKETOWN",
+          "agencyName" : "BIKETOWN"
         }
       ]
     },
