@@ -24,7 +24,4 @@ if(transitConfig == undefined) {
 }
 
 // step 3: we've got a good transit config, so let's start loading Pelias...
-utils.startTiming();
-
-// step 4: load each of the configured transit datasets
 loader.loadTransitFeeds(transitConfig);
