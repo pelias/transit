@@ -25,5 +25,3 @@ http://localhost:9200/_cat/indices?v
 curl -XGET http://localhost:9200/pelias/_search?pretty=true&q=*:*
 curl -XGET http://localhost:3100/v1/search?text=2
 ```
-
-
