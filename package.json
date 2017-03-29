@@ -4,7 +4,8 @@
   "description": "Import Stops, Intersections, P&Rs, TCs, TVMs and other landmark data related to transit, etc...",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "stop": "node lib/extract.js"
   },
   "author": "purcellf",
   "attribution": "code based off of Delaware Schools from trescube https://github.com/trescube/delaware-schools-pelias-importer, as well as other Pelias loader projects",
