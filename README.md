@@ -1,5 +1,5 @@
 # pelias.loader
-Load transit landmarks into the Pelias geocoder.  Based on 
+Load transit landmarks into the Pelias geocoder.
 
 
 ### Setup empty ES index with Pelias schema
