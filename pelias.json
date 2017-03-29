@@ -7,14 +7,24 @@
       "datapath": "/mnt/pelias/transit",
       "feeds": [
         {
-          "type" : "stops",
+          "url" : "x",
+          "layerId" : "stops",
           "filename" : "TRIMET-stops.txt",
-          "agencyId" : "TRIMET"
+          "agencyId" : "TRIMET",
+          "agencyName" :  "TriMet"
         },
         {
-          "type" : "stops",
+          "layerId" : "stops",
           "filename" : "C-TRAN-stops.txt",
-          "agencyId" : "C-TRAN"
+          "agencyId" : "C-TRAN",
+          "agencyName" :  "C-TRAN"
+        },
+        {
+          "url" : "http://biketownpdx.socialbicycles.com/opendata/station_information.json",
+          "layerId" : "bikeshare",
+          "filename" : "station_information.json",
+          "agencyId" : "BIKETOWN",
+          "agencyName" :  "BIKETOWN"
         }
       ]
     },

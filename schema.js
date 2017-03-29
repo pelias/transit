@@ -3,10 +3,12 @@
 const Joi = require('joi');
 
 const arrayObj = Joi.object().keys({
+    url: Joi.string(),
     filename: Joi.string().required(),
-    type: Joi.string().required().valid('stops', 'pr', 'tc', 'tvm', 'intersection', 'carshare', 'bikeshare'),
+    layerId: Joi.string().required().valid('stops', 'pr', 'tc', 'tvm', 'intersection', 'carshare', 'bikeshare'),
     agencyId: Joi.string().required(),
-}).requiredKeys('filename', 'agencyId', 'type');
+    agencyName: Joi.string()
+}).requiredKeys('filename', 'agencyId', 'layerId');
 
 /** Schema Configuration
 
@@ -17,9 +19,10 @@ const arrayObj = Joi.object().keys({
       "datapath": "/mnt/pelias/transit",
       "feeds": [
         {
-          "type" : "stops",
+          "layerId" : "stops",
           "filename" : "TRIMET-stops.txt",
-          "agencyId" : "TRIMET"
+          "agencyId" : "TRIMET",
+          "agencyName" : "TriMet"
         }
       ]
     },
