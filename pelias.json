@@ -1,7 +1,7 @@
 {
   "imports": {
     "adminLookup" : {
-      "enabled" : false
+      "enabled" : true
     },
     "transit": {
       "datapath": "/mnt/pelias/transit",
@@ -13,11 +13,6 @@
         },
         {
           "type" : "stops",
-          "filename" : "C-TRAN-stops.txt",
-          "agencyId" : "C-TRAN"
-        },
-        {
-          "type" : "pr",
           "filename" : "C-TRAN-stops.txt",
           "agencyId" : "C-TRAN"
         }
