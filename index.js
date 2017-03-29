@@ -11,16 +11,15 @@ const loader = require('./lib/loader');
 // step 1: make sure we have valid transit configuration
 const peliasConfig = require('pelias-config').generate(true);
 const transitConfig = _.get(peliasConfig, 'imports.transit');
-const valid = Joi.validate(transitConfig, schema);
-const error = valid[0];
+const validate = Joi.validate(transitConfig, schema);
 
 // step 2: config error checking ... note potential early exit
-if(error) {
-    utils.logger.error(`transit config error: ${error}`);
+if(validate.error) {
+    utils.logger.error(`transit config error: ${validate.error}`);
     process.exit(0);
 }
-if(transitConfig == undefined || transitConfig.feeds == undefined) {
-    utils.logger.error(`your pelias.json config lacks a transit.feeds array`);
+if(transitConfig == undefined) {
+    utils.logger.error(`your 'pelias.json' config lacks a transit object entry ... @see schema.js`);
     process.exit(0);
 }
 

@@ -12,13 +12,13 @@
           "agencyId" : "TRIMET"
         },
         {
-          "type" : "pr",
+          "type" : "stops",
           "filename" : "C-TRAN-stops.txt",
           "agencyId" : "C-TRAN"
         },
         {
-          "type" : "stx",
-          "filename" : "C-TRAN-stops.txt",
+          "type" : "pr",
+          "filename" : "C-TRAN-stps.txt",
           "agencyId" : "C-TRAN"
         }
       ]
