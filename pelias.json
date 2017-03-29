@@ -5,7 +5,7 @@
     },
     "transit": {
       "datapath": "/mnt/pelias/transit",
-      "files": [
+      "feeds": [
         {
           "type" : "stops",
           "filename" : "TRIMET-stops.txt",
