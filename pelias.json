@@ -20,11 +20,34 @@
           "agencyName" : "C-TRAN"
         },
         {
-          "url" : "http://biketownpdx.socialbicycles.com/opendata/station_information.json",
-          "layerId" : "bikeshare",
-          "filename" : "station_information.json",
-          "agencyId"   : "BIKETOWN",
-          "agencyName" : "BIKETOWN"
+          "layerId" : "stops",
+          "filename" : "RIDECONNECTION-stops.txt",
+          "agencyId"   : "RIDECONNECTION",
+          "agencyName" : "Ride Connection"
+        },
+        {
+          "layerId" : "stops",
+          "filename" : "CHERRIOTS-stops.txt",
+          "agencyId"   : "CHERRIOTS",
+          "agencyName" : "Cherriots / Salem-Keizer Transit"
+        },
+        {
+          "layerId" : "stops",
+          "filename" : "SAM-stops.txt",
+          "agencyId"   : "SAM",
+          "agencyName" : "Sandy Area Metro"
+        },
+        {
+          "layerId" : "stops",
+          "filename" : "SMART-stops.txt",
+          "agencyId"   : "SMART",
+          "agencyName" : "SMART"
+        },
+        {
+          "layerId" : "stops",
+          "filename" : "SWAN-stops.txt",
+          "agencyId"   : "SWAN",
+          "agencyName" : "Swan Island Evening Shuttle Service"
         }
       ]
     },
