@@ -5,7 +5,7 @@ const Joi = require('joi');
 const arrayObj = Joi.object().keys({
     url: Joi.string(),
     filename: Joi.string().required(),
-    layerId: Joi.string().required().valid('stops', 'pr', 'tc', 'tvm', 'intersection', 'carshare', 'bikeshare'),
+    layerId: Joi.string().required().valid('stops', 'pr', 'br', 'tc', 'tvm', 'intersections', 'carshare', 'bikeshare'),
     agencyId: Joi.string().required(),
     agencyName: Joi.string()
 }).requiredKeys('filename', 'agencyId', 'layerId');
