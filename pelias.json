@@ -7,6 +7,16 @@
       "datapath": "/mnt/pelias/transit",
       "feeds": [
         {
+          "layerId" : "landmarks",
+          "filename" : "TRIMET-landmarks.csv",
+          "agencyId"   : "TRIMET",
+          "agencyName" : "TriMet"
+        },
+        {
+          "layerId" : "intersections",
+          "filename" : "intersections.csv"
+        },
+        {
           "url" : "x",
           "layerId" : "stops",
           "filename" : "TRIMET-stops.txt",
