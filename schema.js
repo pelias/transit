@@ -5,10 +5,10 @@ const Joi = require('joi');
 const arrayObj = Joi.object().keys({
     url: Joi.string(),
     filename: Joi.string().required(),
-    layerId: Joi.string().required().valid('stops', 'pr', 'br', 'tc', 'tvm', 'intersections', 'carshare', 'bikeshare'),
-    agencyId: Joi.string().required(),
+    layerId: Joi.string().required().valid('stops', 'landmarks', 'intersections', 'carshare', 'bikeshare'),
+    agencyId: Joi.string(),
     agencyName: Joi.string()
-}).requiredKeys('filename', 'agencyId', 'layerId');
+}).requiredKeys('filename', 'layerId');
 
 /** Schema Configuration
 
