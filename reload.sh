@@ -31,7 +31,7 @@ git clone https://github.com/OpenTransitTools/pelias.transit.loader.git
 ln -s ~/projects/pelias.transit.loader/pelias.json ~/pelias.json
 cd ~/projects/pelias.transit.loader/
 npm install
-npm stop
+npm run prep_data
 
 # step 3: create new / empty index
 cd ~/projects/schema
