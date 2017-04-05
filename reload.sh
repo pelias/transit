@@ -40,7 +40,7 @@ node scripts/create_index.js
 
 # step 4: load the system...
 #loaders=(pelias.transit.loader openaddresses openstreetmap polylines geonames whosonfirst)
-loaders=(pelias.transit.loader openaddresses openstreetmap polylines)
+loaders=(pelias.transit.loader openaddresses openstreetmap)
 for l in "${loaders[@]}"
 do
     echo $l
