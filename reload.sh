@@ -6,6 +6,7 @@ mv openaddresses  openstreetmap  transit ./old/
 mkdir /mnt/pelias/transit
 cd /mnt/pelias/transit
 scp otp@maps7:~/loader/ott/loader/gtfs/cache/*.zip .
+scp otp@maps7:~/loader/ott/loader/geocoder/db_export/cache/*csv .
 
 mkdir /mnt/pelias/openstreetmap
 cd /mnt/pelias/openstreetmap
@@ -38,8 +39,8 @@ curl -XDELETE 'localhost:9200/pelias?pretty'
 node scripts/create_index.js
 
 # step 4: load the system...
-#loaders=(pelias.transit.loader whosonfirst polylines geonames openstreetmap openaddresses)
-loaders=(pelias.transit.loader openaddresses  openstreetmap polylines)
+#loaders=(pelias.transit.loader openaddresses openstreetmap polylines geonames whosonfirst)
+loaders=(pelias.transit.loader openaddresses openstreetmap polylines)
 for l in "${loaders[@]}"
 do
     echo $l
@@ -47,4 +48,3 @@ do
     npm install
     npm start
 done
-
