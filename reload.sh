@@ -14,6 +14,7 @@ scp otp@maps7:~/loader/ott/loader/osm/cache/or-wa.pbf .
 
 mkdir /mnt/pelias/openaddresses
 cd /mnt/pelias/openaddresses
+mv openaddr-collected-us_west.zip openaddr-collected-us_west.zip-OLD
 wget https://s3.amazonaws.com/data.openaddresses.io/openaddr-collected-us_west.zip .
 # FOR TESTING THIS SCRIPT >> cp ~/openaddr-collected-us_west.zip .
 unzip openaddr-collected-us_west.zip
