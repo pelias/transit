@@ -1,4 +1,13 @@
 {
+  "api": {
+    "textAnalyzer": "libpostal",
+  },
+  "interpolation": {
+    "client": {
+      "adapter": "http",
+      "host": "http://localhost:3000"
+    }
+  },
   "imports": {
     "adminLookup" : {
       "enabled" : true
