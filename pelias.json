@@ -1,11 +1,11 @@
 {
   "api": {
-    "textAnalyzer": "libpostal",
+    "textAnalyzer": "libpostal"
   },
   "interpolation": {
     "client": {
       "adapter": "http",
-      "host": "http://localhost:3000"
+      "host": "http://127.0.0.1:3000"
     }
   },
   "imports": {
