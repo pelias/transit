@@ -4,6 +4,7 @@
   },
   "interpolation": {
     "client": {
+      "timeout": 2000,
       "adapter": "http",
       "host": "http://127.0.0.1:3000"
     }
@@ -97,7 +98,7 @@
     },
     "polyline": {
       "datapath": "/mnt/pelias/polyline",
-      "files": ["road_network"]
+      "files": ["or-wa.polylines"]
     },
     "whosonfirst": {
       "datapath": "/mnt/pelias/whosonfirst",
