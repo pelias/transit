@@ -1,11 +1,25 @@
 {
+  "esclient": {
+    "hosts": [
+      {
+        "host": "localhost",
+        "port": 9200,
+        "protocol": "http"
+      },
+      {
+        "host": "localhost",
+        "port": 9300,
+        "protocol": "http"
+      }
+    ]
+  },
   "api": {
     "textAnalyzer": "libpostal"
   },
   "interpolation": {
     "client": {
-      "timeout": 2000,
       "adapter": "http",
+      "timeout": "1000",
       "host": "http://127.0.0.1:3000"
     }
   },
@@ -14,7 +28,7 @@
       "enabled" : true
     },
     "transit": {
-      "datapath": "/mnt/pelias/transit",
+      "datapath": "/srv/pelias_loader/data/transit",
       "feeds": [
         {
           "layerId" : "landmarks",
@@ -72,15 +86,16 @@
       ]
     },
     "openstreetmap": {
-      "datapath": "/mnt/pelias/openstreetmap",
-      "leveldbpath": "/tmp",
-      "import": [{
-        "filename": "or-wa.pbf"
+      "datapath" : "/srv/pelias_loader/data/osm",
+      "leveldbpath" : "/tmp",
+      "deduplicate" : true,
+      "import" : [{
+        "filename" : "or-wa.pbf"
       }]
     },
     "openaddresses": {
-      "deduplicate": false,
-      "datapath": "/mnt/pelias/openaddresses",
+      "datapath" : "/srv/pelias_loader/data/oa",
+      "deduplicate" : true,
       "files": [
         "us/or/city_of_salem.csv",
         "us/or/gresham.csv",
@@ -97,16 +112,14 @@
       ]
     },
     "polyline": {
-      "datapath": "/mnt/pelias/polyline",
-      "files": ["or-wa.polylines"]
+      "datapath": "/srv/pelias_loader/data/osm",
+      "files": [
+        "or-wa.polylines"
+      ]
     },
     "whosonfirst": {
-      "datapath": "/mnt/pelias/whosonfirst",
-      "importVenues": false
-    },
-    "geonames": {
-      "datapath": "./data",
-      "countryCode": "US"
+      "datapath": "/srv/pelias_loader/data/wof",
+      "importVenues" : false
     }
   }
 }

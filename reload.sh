@@ -1,51 +1,51 @@
-# step 1: download transit, OSM and OR-WA data
-cd /mnt/pelias/
-mkdir ./old
-mv openaddresses  openstreetmap  transit ./old/
+HOME_DIR=/srv/pelias_loader
+DATA_DIR=$HOME_DIR/data
+PROJ_DIR=$HOME_DIR/projects
 
-mkdir /mnt/pelias/transit
-cd /mnt/pelias/transit
+# step 1: download transit, OSM and OR-WA data
+cd $DATA_DIR
+mv oa osm transit wof ./old/
+
+mkdir $DATA_DIR/transit
+cd $DATA_DIR/transit
 scp otp@maps7:~/loader/ott/loader/gtfs/cache/*.zip .
 scp otp@maps7:~/loader/ott/loader/geocoder/db_export/cache/*csv .
 
-mkdir /mnt/pelias/openstreetmap
-cd /mnt/pelias/openstreetmap
+mkdir $DATA_DIR/osm
+cd $DATA_DIR/osm
 scp otp@maps7:~/loader/ott/loader/osm/cache/or-wa.pbf .
 
-mkdir /mnt/pelias/openaddresses
-cd /mnt/pelias/openaddresses
+mkdir $DATA_DIR/oa
+cd $DATA_DIR/oa
 mv openaddr-collected-us_west.zip openaddr-collected-us_west.zip-OLD
 wget https://s3.amazonaws.com/data.openaddresses.io/openaddr-collected-us_west.zip .
 # FOR TESTING THIS SCRIPT >> cp ~/openaddr-collected-us_west.zip .
 unzip openaddr-collected-us_west.zip
 
+# step 1b: download wof admin data
+cd $PROJ_DIR/whosonfirst
+npm install
+npm run download -- --admin-only
 
-# step 2: clone the pelias.transit.loader and set up the config from that project as out pelias.json
-cd ~/
-mkdir ./old
-mv pelias.json old/
-rm pelias.json
-
-cd ~/projects/
-rm -rf pelias.transit.loader
-git clone https://github.com/OpenTransitTools/pelias.transit.loader.git
-ln -s ~/projects/pelias.transit.loader/pelias.json ~/pelias.json
-cd ~/projects/pelias.transit.loader/
+# step 1c. get pelias.transit's data ready
+cd $PROJ_DIR/pelias.transit.loader/
 npm install
 npm run prep_data
 
-# step 3: create new / empty index
+# step 2: create new / empty index
 cd ~/projects/schema
 curl -XDELETE 'localhost:9200/pelias?pretty'
 node scripts/create_index.js
 
-# step 4: load the system...
-#loaders=(pelias.transit.loader openaddresses openstreetmap polylines geonames whosonfirst)
+# step 3: load the system...
 loaders=(pelias.transit.loader openaddresses openstreetmap)
 for l in "${loaders[@]}"
 do
     echo $l
-    cd ~/projects/$l/
+    cd $PROJ_DIR/$l/
     npm install
     npm start
 done
+
+# step 4: create interpolation databases
+GO
