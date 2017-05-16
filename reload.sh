@@ -2,18 +2,20 @@ HOME_DIR=/srv/pelias_loader
 DATA_DIR=$HOME_DIR/data
 PROJ_DIR=$HOME_DIR/projects
 
+DATA_SVR=http://maps7/pelias
+
+
 # step 1: download transit, OSM and OR-WA data
 cd $DATA_DIR
 mv oa osm transit wof ./old/
 
 mkdir $DATA_DIR/transit
 cd $DATA_DIR/transit
-scp otp@maps7:~/loader/ott/loader/gtfs/cache/*.zip .
-scp otp@maps7:~/loader/ott/loader/geocoder/db_export/cache/*csv .
+wget $DATA_SVR/transit/* .
 
 mkdir $DATA_DIR/osm
 cd $DATA_DIR/osm
-scp otp@maps7:~/loader/ott/loader/osm/cache/or-wa.pbf .
+wget $DATA_SVR/osm/* .
 
 mkdir $DATA_DIR/oa
 cd $DATA_DIR/oa
