@@ -2,8 +2,7 @@ HOME_DIR=/srv/pelias_loader
 DATA_DIR=$HOME_DIR/data
 PROJ_DIR=$HOME_DIR/projects
 
-DATA_SVR=http://maps7/pelias
-
+MAPS_SVR=http://maps7/pelias
 
 # step 1: download transit, OSM and OR-WA data
 cd $DATA_DIR
@@ -11,11 +10,14 @@ mv oa osm transit wof ./old/
 
 mkdir $DATA_DIR/transit
 cd $DATA_DIR/transit
-wget $DATA_SVR/transit/* .
+wget $MAPS_SVR/transit/* .
 
 mkdir $DATA_DIR/osm
 cd $DATA_DIR/osm
-wget $DATA_SVR/osm/* .
+wget $MAPS_SVR/osm/* .
+
+## gate remaining script -- just download updated transit (commands above) if a cmd line param included
+if [ $? -eq 0 ];then
 
 mkdir $DATA_DIR/oa
 cd $DATA_DIR/oa
@@ -51,3 +53,5 @@ done
 
 # step 4: create interpolation databases
 GO
+
+fi
