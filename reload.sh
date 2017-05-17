@@ -10,12 +10,13 @@ mv oa osm transit wof ./old/
 
 mkdir $DATA_DIR/transit
 cd $DATA_DIR/transit
-wget $MAPS_SVR/transit/*.zip .
-wget $MAPS_SVR/transit/*.csv .
+foreach i ( CHERRIOTS.zip C-TRAN.zip RIDECONNECTION.zip SAM.zip SWAN.zip SMART.zip TRIMET.zip intersections.csv TRIMET-landmarks.csv )
+  wget $MAPS_SVR/transit/$i .
+done
 
 mkdir $DATA_DIR/osm
 cd $DATA_DIR/osm
-wget $MAPS_SVR/osm/*.pbf .
+wget $MAPS_SVR/osm/or-wa.pbf
 
 ## gate remaining script -- just download updated transit (commands above) if a cmd line param included
 if [ $? -eq 0 ];then
