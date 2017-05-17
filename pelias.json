@@ -88,14 +88,14 @@
     "openstreetmap": {
       "datapath" : "/srv/pelias_loader/data/osm",
       "leveldbpath" : "/tmp",
-      "deduplicate" : true,
+      "deduplicate" : false,
       "import" : [{
         "filename" : "or-wa.pbf"
       }]
     },
     "openaddresses": {
       "datapath" : "/srv/pelias_loader/data/oa",
-      "deduplicate" : true,
+      "deduplicate" : false,
       "files": [
         "us/or/city_of_salem.csv",
         "us/or/gresham.csv",
