@@ -6,6 +6,7 @@ MAPS_SVR=http://maps7/pelias
 
 # step 1: download transit, OSM and OR-WA data
 cd $DATA_DIR
+rm -rf old
 mkdir old
 mv oa osm transit wof ./old/
 
@@ -20,7 +21,9 @@ mkdir $DATA_DIR/osm
 cd $DATA_DIR/osm
 wget $MAPS_SVR/osm/or-wa.pbf
 
-## gate remaining script -- just download updated transit (commands above) if a cmd line param included
+##
+## gate script -- just download updated transit (commands above) if a cmd line param included
+##
 if [ ${#} -eq 0 ];then
 
 mkdir $DATA_DIR/oa
@@ -35,6 +38,13 @@ cd $PROJ_DIR/whosonfirst
 npm install
 npm run download -- --admin-only
 
+else
+
+mv $DATA_DIR/old/oa $DATA_DIR/
+mv $DATA_DIR/old/wof $DATA_DIR/
+
+fi
+
 # step 1c. get pelias.transit's data ready
 cd $PROJ_DIR/pelias.transit.loader/
 npm install
@@ -43,6 +53,7 @@ npm run prep_data
 # step 2: create new / empty index
 cd ~/projects/schema
 curl -XDELETE 'localhost:9200/pelias?pretty'
+npm install
 node scripts/create_index.js
 
 # step 3: load the system...
@@ -54,6 +65,11 @@ do
     npm install
     npm start
 done
+
+##
+## gate script
+##
+if [ ${#} -eq 0 ];then
 
 # step 4: create interpolation databases
 GO
