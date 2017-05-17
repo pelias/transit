@@ -21,6 +21,9 @@ mkdir $DATA_DIR/osm
 cd $DATA_DIR/osm
 wget $MAPS_SVR/osm/or-wa.pbf
 
+cd $DATA_DIR/osm
+$PROJ_DIR/go_polylines/bin/pbf streets or-wa.pbf > or-wa.polylines
+
 ##
 ## gate script -- just download updated transit (commands above) if a cmd line param included
 ##
@@ -40,7 +43,7 @@ npm run download -- --admin-only
 
 else
 
-mv $DATA_DIR/old/oa $DATA_DIR/
+mv $DATA_DIR/old/oa  $DATA_DIR/
 mv $DATA_DIR/old/wof $DATA_DIR/
 
 fi
@@ -51,13 +54,13 @@ npm install
 npm run prep_data
 
 # step 2: create new / empty index
-cd ~/projects/schema
+cd $PROJ_DIR/schema
 curl -XDELETE 'localhost:9200/pelias?pretty'
 npm install
 node scripts/create_index.js
 
 # step 3: load the system...
-loaders=(pelias.transit.loader openaddresses openstreetmap)
+loaders=(pelias.transit.loader polylines openaddresses openstreetmap)
 for l in "${loaders[@]}"
 do
     echo $l
@@ -66,12 +69,6 @@ do
     npm start
 done
 
-##
-## gate script
-##
+# step 4: create street.db and address.db for interpolation
 if [ ${#} -eq 0 ];then
-
-# step 4: create interpolation databases
-GO
-
 fi
