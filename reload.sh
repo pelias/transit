@@ -6,6 +6,7 @@ MAPS_SVR=http://maps7/pelias
 
 # step 1: download transit, OSM and OR-WA data
 cd $DATA_DIR
+mkdir old
 mv oa osm transit wof ./old/
 
 mkdir $DATA_DIR/transit
