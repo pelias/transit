@@ -70,6 +70,7 @@ do
 done
 
 # step 4: create street.db and address.db for interpolation (*again, gate script)
+# see: https://github.com/pelias/interpolation#building-the-databases
 if [ ${#} -eq 0 ];then
     mkdir $DATA_DIR/tiger
     mkdir $DATA_DIR/interpolation
@@ -89,7 +90,6 @@ if [ ${#} -eq 0 ];then
         echo $OA_CSV
         node cmd/oa address.db street.db < $OA_CSV > openaddess-wa.log 2>&1
     done
-
     for x in city_of_salem clackamas gresham hood_river marion_and_polk multnomah oregon_city portland washington yarnhill
     do
         OA_CSV="$DATA_DIR/oa/us/or/$x.csv"
@@ -99,11 +99,13 @@ if [ ${#} -eq 0 ];then
 
     # 4d: OSM into STREET_DB & ADDRESS_DB
     pbf2json -tags="addr:housenumber+addr:street" $DATA_DIR/osm/or-wa.pbf > osm_data.json
-    node cmd/oa
-
+    node cmd/osm address.db street.db < osm_data.json
 
     # 4e: OSM into STREET_DB & ADDRESS_DB
-    flock -w 21112.111 tiger_download.log -c ''
+    flock -w 21112.111 tiger_download.log -c 'node cmd/tiger address.db street.db'
+
+    # 4f: interpolate step
+    node cmd/vertices address.db street.db
 
     # 4z: move DBs to
     ## TODO maybe check size of these .db files ... backup the old ones, etc....
