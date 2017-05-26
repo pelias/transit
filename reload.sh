@@ -98,7 +98,7 @@ node cmd/polyline street.db < /data/osm/$POLYLINES_FILE
 # 4c: OA into STREET_DB & ADDRESS_DB
 for x in clark city_of_richland
 do
-    OA_CSV="$DATA_DIR/oa/us/wa/$x.csv"pp
+    OA_CSV="$DATA_DIR/oa/us/wa/$x.csv"
     echo $OA_CSV
     node cmd/oa address.db street.db < $OA_CSV > openaddess-wa.log 2>&1
 done
