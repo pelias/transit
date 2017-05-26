@@ -72,16 +72,15 @@ done
 
 # step 4: create street.db and address.db for interpolation (*again, gate script)
 # see: https://github.com/pelias/interpolation#building-the-databases
-
-mkdir $DATA_DIR/tiger
-mkdir $DATA_DIR/interpolation
+cd $PROJ_DIR/interpolation/
+rm *.log *.db osm_data.json
 
 # 4a: grab tiger data (will take a few minutes, even if no data downloaded ... so run it in the background)
+mkdir $DATA_DIR/tiger
 export TIGER_LOG=$DATA_DIR/tiger/download.log
 flock -n $TIGER_LOG -c './script/update_tiger.sh > $TIGER_LOG 2>&1' &
 
 # 4b: POLYLINE into street.db
-cd $PROJ_DIR/interpolation
 node cmd/polyline street.db < /data/osm/or-wa.polylines
 
 # 4c: OA into STREET_DB & ADDRESS_DB
@@ -110,5 +109,6 @@ node cmd/vertices address.db street.db
 
 # 4z: move DBs to
 ## TODO maybe check size of these .db files ... backup the old ones, etc....
+mkdir $DATA_DIR/interpolation
 mv street.db $DATA_DIR/interpolation/
 mv address.db $DATA_DIR/interpolation/
