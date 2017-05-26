@@ -100,8 +100,11 @@ if [ ${#} -eq 0 ];then
     done
 
     # 4d: OSM into STREET_DB & ADDRESS_DB
-    pbf2json 
+    pbf2json -tags="addr:housenumber+addr:street" $DATA_DIR/osm/or-wa.pbf > osm_data.json
+    node cmd/oa
 
+
+    # 4e: OSM into STREET_DB & ADDRESS_DB
     flock -w 21112.111 tiger_download.log -c ''
 
     # 4z: move DBs to
