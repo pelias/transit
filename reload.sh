@@ -83,20 +83,18 @@ if [ ${#} -eq 0 ];then
     node cmd/polyline street.db < /data/osm/or-wa.polylines
 
     # 4c: OA into STREET_DB & ADDRESS_DB
-    WA=clark city_of_richland
-    OR=city_of_salem clackamas gresham hood_river marion_and_polk multnomah oregon_city portland washington yarnhill
-    for x in $WA
+    for x in clark city_of_richland
     do
-        OA_CSV = $DATA_DIR/oa/us/wa/$x.csv
+        OA_CSV="$DATA_DIR/oa/us/wa/$x.csv"
         echo $OA_CSV
-        node cmd/oa address.db street.db < $OA_CSV
+        node cmd/oa address.db street.db < $OA_CSV > openaddess-wa.log 2>&1
     done
 
-    for x in $OR
+    for x in city_of_salem clackamas gresham hood_river marion_and_polk multnomah oregon_city portland washington yarnhill
     do
-        OA_CSV = $DATA_DIR/oa/us/or/$x.csv
+        OA_CSV="$DATA_DIR/oa/us/or/$x.csv"
         echo $OA_CSV
-        node cmd/oa address.db street.db < $OA_CSV
+        node cmd/oa address.db street.db < $OA_CSV > openaddess-or.log 2>&1
     done
 
     # 4d: OSM into STREET_DB & ADDRESS_DB
