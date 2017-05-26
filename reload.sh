@@ -29,22 +29,22 @@ $PROJ_DIR/go_polylines/bin/pbf streets or-wa.pbf > or-wa.polylines
 ##
 if [ ${#} -eq 0 ];then
 
-mkdir $DATA_DIR/oa
-cd $DATA_DIR/oa
-mv openaddr-collected-us_west.zip openaddr-collected-us_west.zip-OLD
-wget https://s3.amazonaws.com/data.openaddresses.io/openaddr-collected-us_west.zip .
-# FOR TESTING THIS SCRIPT >> cp ~/openaddr-collected-us_west.zip .
-unzip openaddr-collected-us_west.zip
+    mkdir $DATA_DIR/oa
+    cd $DATA_DIR/oa
+    mv openaddr-collected-us_west.zip openaddr-collected-us_west.zip-OLD
+    wget https://s3.amazonaws.com/data.openaddresses.io/openaddr-collected-us_west.zip .
+    # FOR TESTING THIS SCRIPT >> cp ~/openaddr-collected-us_west.zip .
+    unzip openaddr-collected-us_west.zip
 
-# step 1b: download wof admin data
-cd $PROJ_DIR/whosonfirst
-npm install
-npm run download -- --admin-only
+    # step 1b: download wof admin data
+    cd $PROJ_DIR/whosonfirst
+    npm install
+    npm run download -- --admin-only
 
-else
+    else
 
-mv $DATA_DIR/old/oa  $DATA_DIR/
-mv $DATA_DIR/old/wof $DATA_DIR/
+    mv $DATA_DIR/old/oa  $DATA_DIR/
+    mv $DATA_DIR/old/wof $DATA_DIR/
 
 fi
 
@@ -69,6 +69,44 @@ do
     npm start
 done
 
-# step 4: create street.db and address.db for interpolation
+# step 4: create street.db and address.db for interpolation (*again, gate script)
 if [ ${#} -eq 0 ];then
+    mkdir $DATA_DIR/tiger
+    mkdir $DATA_DIR/interpolation
+
+    # 4a: grab tiger data (will take a few minutes, even if no data downloaded ... so run it in the background)
+    TIGER_LOG=$DATA_DIR/tiger/download.log
+    flock -n $TIGER_LOG -c './script/update_tiger.sh > $TIGER_LOG 2>&1' &
+
+    # 4b: POLYLINE into street.db
+    cd $PROJ_DIR/interpolation
+    node cmd/polyline street.db < /data/osm/or-wa.polylines
+
+    # 4c: OA into STREET_DB & ADDRESS_DB
+    WA=clark city_of_richland
+    OR=city_of_salem clackamas gresham hood_river marion_and_polk multnomah oregon_city portland washington yarnhill
+    for x in $WA
+    do
+        OA_CSV = $DATA_DIR/oa/us/wa/$x.csv
+        echo $OA_CSV
+        node cmd/oa address.db street.db < $OA_CSV
+    done
+
+    for x in $OR
+    do
+        OA_CSV = $DATA_DIR/oa/us/or/$x.csv
+        echo $OA_CSV
+        node cmd/oa address.db street.db < $OA_CSV
+    done
+
+    # 4d: OSM into STREET_DB & ADDRESS_DB
+    pbf2json 
+
+    flock -w 21112.111 tiger_download.log -c ''
+
+    # 4z: move DBs to
+    ## TODO maybe check size of these .db files ... backup the old ones, etc....
+    mv street.db $DATA_DIR/interpolation/
+    mv address.db $DATA_DIR/interpolation/
+
 fi
