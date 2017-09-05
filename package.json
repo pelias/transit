@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "prep_data": "node lib/prep_data.js"
+    "download": "node lib/prep_data.js"
   },
   "author": "purcellf",
   "attribution": "code based off of Delaware Schools from trescube https://github.com/trescube/delaware-schools-pelias-importer, as well as other Pelias loader projects",
