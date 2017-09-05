@@ -2,6 +2,9 @@
 Load transit landmarks, stops and street intersections into the Pelias geocoder.
 
 
+### Note: you might need to set an env var to find pelis.json (if you keep getting 'transit' not in your schema errors, try the following):
+export PELIAS_CONFIG=${PWD#/cygdrive/c}/pelias.json
+
 ### Setup empty ES index with Pelias schema
 ```javascript
 cd /srv/pelias_loader/projects/schema
