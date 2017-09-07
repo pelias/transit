@@ -53,6 +53,14 @@
 
         {
           "layerId" : "stops",
+          "url" : "http://www.c-tran.com/images/Google/GoogleTransitUpload.zip",
+          "filename" : "C-TRAN-stops.txt",
+          "agencyId"   : "C-TRAN",
+          "agencyName" : "C-TRAN"
+        },
+
+        {
+          "layerId" : "stops",
           "url" : "http://oregon-gtfs.com/gtfs_data/swanisland-or-us/swanisland-or-us.zip",
           "filename" : "SWAN-stops.txt",
           "agencyId"   : "SWAN",

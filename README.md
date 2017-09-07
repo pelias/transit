@@ -39,13 +39,6 @@ curl -XGET http://localhost:3100/v1/search?text=2
         },
         {
           "layerId" : "stops",
-          "url" : "http://www.c-tran.com/images/Google/GoogleTransitUpload.zip",
-          "filename" : "C-TRAN-stops.txt",
-          "agencyId"   : "C-TRAN",
-          "agencyName" : "C-TRAN"
-        },
-        {
-          "layerId" : "stops",
           "url" : "http://oregon-gtfs.com/gtfs_data/rideconnection-or-us/rideconnection-or-us.zip",
           "filename" : "RIDECONNECTION-stops.txt",
           "agencyId"   : "RIDECONNECTION",
