@@ -28,3 +28,47 @@ http://localhost:9200/_cat/indices?v
 curl -XGET http://localhost:9200/pelias/_search?pretty=true&q=*:*
 curl -XGET http://localhost:3100/v1/search?text=2
 ```
+
+
+        {
+          "layerId" : "stops",
+          "url" : "http://developer.trimet.org/schedule/gtfs.zip",
+          "filename" : "TRIMET-stops.txt",
+          "agencyId"   : "TRIMET",
+          "agencyName" : "TriMet"
+        },
+        {
+          "layerId" : "stops",
+          "url" : "http://www.c-tran.com/images/Google/GoogleTransitUpload.zip",
+          "filename" : "C-TRAN-stops.txt",
+          "agencyId"   : "C-TRAN",
+          "agencyName" : "C-TRAN"
+        },
+        {
+          "layerId" : "stops",
+          "url" : "http://oregon-gtfs.com/gtfs_data/rideconnection-or-us/rideconnection-or-us.zip",
+          "filename" : "RIDECONNECTION-stops.txt",
+          "agencyId"   : "RIDECONNECTION",
+          "agencyName" : "Ride Connection"
+        },
+        {
+          "layerId" : "stops",
+          "url" : "http://cherriots.org/developer/gtfs.zip",
+          "filename" : "CHERRIOTS-stops.txt",
+          "agencyId"   : "CHERRIOTS",
+          "agencyName" : "Cherriots / Salem-Keizer Transit"
+        },
+        {
+          "layerId" : "stops",
+          "url" : "http://oregon-gtfs.com/gtfs_data/sandy-or-us/sandy-or-us.zip",
+          "filename" : "SAM-stops.txt",
+          "agencyId"   : "SAM",
+          "agencyName" : "Sandy Area Metro"
+        },
+        {
+          "layerId" : "stops",
+          "url" : "http://data.trilliumtransit.com/gtfs/wilsonville-or-us/wilsonville-or-us.zip",
+          "filename" : "SMART-stops.txt",
+          "agencyId"   : "SMART",
+          "agencyName" : "SMART"
+        },

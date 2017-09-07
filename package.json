@@ -15,6 +15,7 @@
     "lodash": "^4.10.0",
     "csv-parse": "^1.2.0",
     "decompress": "^4.0.0",
+    "sync-request": "^4.1.0",
     "through2": "^2.0.3",
     "combined-stream": "^1.0.5",
     "pelias-logger": "^0.1.0",
