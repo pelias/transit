@@ -30,11 +30,14 @@ curl -XGET http://localhost:3100/v1/search?text=2
 ```
 
 ### docker ... at least to download data
+#####\#INITIAL CHECKOUT
+1. git clone https://github.com/OpenTransitTools/pelias.transit.loader.git
+1. cd pelias.transit.loader
+#####\#DOWNLOAD DATA
+1. export DATA_DIR=/data
 1. rm -rf /data/transit
 1. docker rmi -f pelias_transit
 1. mkdir /data
-1. git clone https://github.com/OpenTransitTools/pelias.transit.loader.git
-1. cd pelias.transit.loader
 1. docker build --tag pelias_transit .
 1. docker images
 1. docker run -i -t pelias_transit  npm run download
