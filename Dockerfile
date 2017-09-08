@@ -18,4 +18,8 @@ ARG REVISION=master
 RUN npm install
 
 # run tests
-RUN npm test
+# TODO RUN npm test
+
+# hope we pull in the local pelias.json
+ADD 'pelias.json' '/code/pelias.json'
+ENV PELIAS_CONFIG '/code/pelias.json'
