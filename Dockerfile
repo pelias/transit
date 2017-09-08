@@ -20,6 +20,7 @@ RUN npm install
 # run tests
 # TODO RUN npm test
 
-# hope we pull in the local pelias.json
+# hope we pull in the local pelias.json and also list find where the local data will reside (ala /data directory)
+VOLUME "/data"
 ADD 'pelias.json' '/code/pelias.json'
 ENV PELIAS_CONFIG '/code/pelias.json'
