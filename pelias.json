@@ -29,6 +29,10 @@
       "interpolation": {
         "url": "http://interpolation:4300"
       }
+    },
+    "defaultParameters": {
+      "focus.point.lat": 45.52,
+      "focus.point.lon": -122.67
     }
   },
   "imports": {
