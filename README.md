@@ -35,10 +35,10 @@ curl -XGET http://localhost:3100/v1/search?text=2
 1. cd pelias.transit.loader
 #####\#DOWNLOAD DATA
 1. export DATA_DIR=/data
-1. rm -rf /data/transit
+1. rm -rf $DATA_DIR/transit
 1. docker rmi -f pelias_transit
-1. mkdir /data
+1. mkdir $DATA_DIR
 1. docker build --tag pelias_transit .
 1. docker images
-1. docker run -i -t pelias_transit  npm run download
+1. docker run -i -v $DATA_DIR:/data -t pelias_transit npm run download
 1. ls /data/transit
