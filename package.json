@@ -7,22 +7,22 @@
     "start": "node index.js",
     "download": "node lib/prep_data.js"
   },
-  "author": "purcellf",
+  "author": "fpurcell",
   "attribution": "code based off of Delaware Schools from trescube https://github.com/trescube/delaware-schools-pelias-importer, as well as other Pelias loader projects",
   "license": "MPL-2.0",
   "dependencies": {
-    "joi": "^10.1.0",
-    "lodash": "^4.10.0",
+    "joi": "^11.0.1",
+    "lodash": "^4.16.0",
     "csv-parse": "^1.2.0",
     "decompress": "^4.0.0",
     "sync-request": "^4.1.0",
     "through2": "^2.0.3",
     "combined-stream": "^1.0.5",
-    "pelias-logger": "^0.1.0",
-    "pelias-config": "^2.7.1",
-    "pelias-dbclient": "^2.0.0",
+    "pelias-logger": "^0.2.0",
+    "pelias-config": "^2.12.1",
+    "pelias-dbclient": "^2.2.2",
     "pelias-model": "^4.5.1",
-    "pelias-wof-admin-lookup": "^3.1.2"
+    "pelias-wof-admin-lookup": "^4.0.0"
   },
   "devDependencies": {},
   "repository": {
