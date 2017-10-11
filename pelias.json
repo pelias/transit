@@ -5,7 +5,8 @@
   },
   "esclient": {
     "hosts": [{
-      "host": "elasticsearch"
+      "host": "localhost",
+      "port": 9200
     }]
   },
   "elasticsearch": {
@@ -37,7 +38,7 @@
   },
   "imports": {
     "adminLookup": {
-      "enabled": true
+      "enabled": false
     },
     "transit": {
       "datapath": "/data/transit",
