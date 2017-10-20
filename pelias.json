@@ -5,7 +5,7 @@
   },
   "esclient": {
     "hosts": [{
-      "host": "localhost",
+      "host": "127.0.0.1",
       "port": 9200
     }]
   },
@@ -54,6 +54,13 @@
           "layerId": "intersections",
           "url": "./test/intersections.csv",
           "filename": "intersections.csv"
+        },
+        {
+          "layerId": "bikeshare",
+          "url": "http://biketownpdx.socialbicycles.com/opendata/station_information.json",
+          "filename": "BIKETOWN-hubs.json",
+          "agencyId": "BIKETOWN",
+          "agencyName": "BIKETOWN"
         },
         {
           "layerId": "stops",
