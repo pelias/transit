@@ -33,6 +33,7 @@ curl -XGET http://localhost:3100/v1/search?text=2
 #####\#INITIAL CHECKOUT
 1. git clone https://github.com/OpenTransitTools/pelias.transit.loader.git
 1. cd pelias.transit.loader
+1. git update-index --no-assume-unchanged pelias.json
 1. git update-index --assume-unchanged pelias.json
 #####\#DOWNLOAD DATA
 1. export DATA_DIR=/data
