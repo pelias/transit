@@ -1,6 +1,6 @@
 'use strict';
-
 const Joi = require('joi');
+
 
 const arrayObj = Joi.object().keys({
     url: Joi.string(),
@@ -9,6 +9,7 @@ const arrayObj = Joi.object().keys({
     agencyId: Joi.string(),
     agencyName: Joi.string()
 }).requiredKeys('filename', 'layerId');
+
 
 /** Schema Configuration
 
@@ -31,4 +32,3 @@ module.exports = Joi.object().keys({
     datapath: Joi.string(),
     feeds: Joi.array().min(1).items(arrayObj),
 }).requiredKeys('datapath', 'feeds');
-
