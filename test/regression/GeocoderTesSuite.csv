@@ -1,0 +1,68 @@
+Location_ID,Category,Type,Source,Name,Prefix,House_Number,Unit_Type,Unit_Number,Street_Name,Street_Type,City,State,Zip,Stop_ID,X_Coord,Y_Coord,Lat,Lon,Request
+1,POI,Top User Submissions,Log Files,PDX,NE,7000,,,Airport,Way,Portland,OR,97218,,,,45.5897694,-122.5950942,Name + City
+101,POI,Intersections,Log Files,5TH AND OAK,,,,,SW 5th Ave & SW Oak St,,Portland,OR,97204,,,,45.5214517,-122.6760663,Name + City
+190,Anomaly,Commonly Misspelled Locations,Log Files,MODS CENTER,N,1,,,Center Ct,St,Portland,OR,97227,,,,45.5315651,-122.6668423,Name + City
+196,Residential,Multifamily Residential,MAF Multifamily,,NE,5272,APARTMENT,108,6TH,AVE,PORTLAND,OR,97211,,7649106.233,698192.6591,45.56147756,-122.659343,Full Address
+296,Transit POI,Landmarks,TriMet Geodata,Cedar Mill Bible Church Park & Ride,NW,12208,,,Cornell,Rd,Portland,OR,97229,,,,45.52568253,-122.8025331,Name + City
+374,Transit POI,Landmarks,TriMet Geodata,N Lombard Transit Center,,,,,N Interstate Ave & Lombard St,,Portland,OR,97217,,,,45.57711666,-122.6820904,Name + City
+464,Residential,Theoretical Addresses,MAF Interpolation,,SW,400,,,Stark,St,Portland,OR,,,,,45.520537,-122.675471,Full Address
+465,Residential,Theoretical Addresses,MAF Interpolation,,SW,300,,,Oak,St,Portland,OR,,,,,45.520901,-122.674093,Full Address
+475,Business,eFare Outlets,Validated Landmarks,La Barca Guerrero,SW,8144,,,Seneca,St,Tualatin,OR,97062,,,,45.38304596,-122.7603473,Name + City
+476,Business,eFare Outlets,Validated Landmarks,Check Cash - Milwaukie,SE,16705,,,Mcloughlin,Blvd,Milwaukie,OR,97267,,,,45.40180316,-122.621642,Name + City
+507,POI,Landmarks,Activity Center,Alpenrose Dairy,SW,6149,,,Shattuck,Rd,Portland,OR,97221,,7627562.349,668920.2437,45.47960969,-122.7402571,Name + City
+508,POI,Landmarks,Activity Center,Arlene Schnitzer Concert Hall,SW,1037,,,Broadway,,Portland,OR,97205,,7643003,682180.31,45.51712732,-122.6814757,Name + City
+562,Transit POI,Landmarks,Airport,Hillsboro Airport,NE,2315,,,Brookwood,Pkwy,Hillsboro,OR,97124,,7574347.437,692605.1646,45.54030447,-122.9504331,Name + City
+563,Transit POI,Landmarks,Airport,Portland International Airport,NE,7000,,,Airport,Way,Portland,OR,97218,,7666235.313,707845.2655,45.58917828,-122.5934638,Name + City
+570,Transit POI,Landmarks,Bike Station,SE Tacoma/Johnson Creek Bike & Ride,SE,8300,,,McLoughlin,Blvd,Portland,OR,97202,,7653792.865,661880.5747,45.462262,-122.637301,Name + City
+571,Transit POI,Landmarks,Bike Station,Sunset TC Bike & Ride,SW,10470,,,Barnes,Rd,Beaverton,OR,97225,,7617180.439,680409.8827,45.5103128,-122.7819823,Name + City
+572,POI,Landmarks,Government Facility/Agency,Beaverton DMV,SW,10280,,,Park,Way,Portland,OR,97225,,7616808.5,679575.2,45.50800014,-122.7833406,Name + City
+616,POI,Landmarks,Hospital,Adventist Medical Center,SE,10123,,,Market,St,Portland,OR,97216,,7674511.5,679735.9375,45.5126898,-122.5583481,Name + City
+617,POI,Landmarks,Hospital,Kaiser Permanente Westside,NW,2875,,,Stucki,Ave,Hillsboro,OR,97124,,7593133,691655,45.53924473,-122.8770375,Name + City
+618,POI,Landmarks,Hospital,Kaiser Sunnyside,SE,10180,,,Sunnyside,Rd,Clackamas,OR,97015,,7673267,650511.9375,45.4324758,-122.5602944,Name + City
+619,POI,Landmarks,Hospital,Legacy Emanuel,N,2801,,,Gantenbein,Ave,Portland,OR,97227,,7646331.5,691757.375,45.5436303,-122.6694981,Name + City
+622,POI,Landmarks,Hospital,Legacy Mount Hood,SE,24800,,,Stark,St,Gresham,OR,97030,,7713349,680282.125,45.51680191,-122.4069352,Name + City
+623,POI,Landmarks,Hospital,OHSU Doernbecher Children's Hospital,SW,700,,,Campus,Dr,Portland,OR,97239,,7641613.426,675176.2876,45.49781769,-122.6861556,Name + City
+625,POI,Landmarks,Hospital,Portland VA Medical Center,SW,3710,,,US Veterans Hospital,Rd,Portland,OR,97239,,7642199,674876.3125,45.49703869,-122.6838411,Name + City
+626,POI,Landmarks,Hospital,Providence Milwaukie,SE,10150,,,32nd,Ave,Milwaukie,OR,97222,,7656168,657216.3125,45.44964218,-122.6275683,Name + City
+627,POI,Landmarks,Hospital,Providence Portland,NE,4805,,,Glisan,St,Portland,OR,97213,,7660438.5,685442.125,45.52733796,-122.6138106,Name + City
+629,POI,Landmarks,Hospital,Providence Willamette Falls,,1500,,,Division,St,Oregon City,OR,97045,,7665729,622915.0625,45.35627817,-122.5868724,Name + City
+632,POI,Landmarks,Hospital,Tuality Community,SE,335,,,8th,Ave,Hillsboro,OR,97123,,7566996,685271.1875,45.51958396,-122.9782337,Name + City
+633,POI,Landmarks,Hospital,Tuality Forest Grove,,1809,,,Maple,St,Forest Grove,OR,97116,,7538178,685255.75,45.51706138,-123.0906069,Name + City
+637,POI,Landmarks,Library,Banks Public Library,NW,42461,,,Market,St,Banks,OR,97106,,7533433.031,722870.6673,45.61975261,-123.1138557,Name + City
+687,Business,Landmarks,Major Employer,EVRAZ Portland,N,14400,,,Rivergate,Blvd,Portland,OR,97203,,7619117.5,722354.56,45.62546051,-122.7790441,Name + City
+704,POI,Landmarks,Museum,Children's Museum,SW,4015,,,Canyon,Rd,Portland,OR,97221,,7633591.098,679303.7436,45.50853396,-122.7178726,Name + City
+719,Transit POI,Landmarks,Park & Ride,Cedar Hills United Church of Christ Park & Ride,SW,11695,,,Park,Way,Portland,OR,97225,,7613513.432,679860.4993,45.50852158,-122.7962201,Name + City
+728,Transit POI,Landmarks,Park & Ride,Delta Park/Vanport Park & Ride,N,1940,,,Victory,Blvd,Portland,OR,97217,,7642589.058,710973.1396,45.59603257,-122.6861292,Name + City
+782,Transit POI,Landmarks,Rail Station,Beaverton TC WES Station,SW,4050,,,Lombard,Ave,Beaverton,OR,97005,,7612062.5,673378.1,45.49064097,-122.8011574,Name + City
+880,POI,Landmarks,Shopping,Bridgeport Village,SW,17001,,,72nd,Ave,Tualatin,OR,97224,,7623700.245,638349.5809,45.39550023,-122.7519867,Name + City
+881,POI,Landmarks,Shopping,Cascade Station,,10123,,,Northeast Cascades,Parkway,Portland,OR,97220,,7675094.074,701947.748,45.57363014,-122.5582835,Name + City
+907,POI,Landmarks,Shopping,WalMart Sherwood,SW,21320,,,Langer Farms,Pkwy,Sherwood,OR,97140,,7602457.5,628325.8,45.36636936,-122.8335228,Name + City
+915,Transit POI,Landmarks,Transit Center,Gateway/NE 99th Ave Transit Center,NE,9900,,,Multnomah,,Portland,OR,97220,,7673365.971,686219.2904,45.53038558,-122.5634613,Name + City
+928,Transit POI,Landmarks,Transportation,Amtrak Oregon City,,1757,,,Washington,St,Oregon City,OR,97045,,7663496.458,626588.9464,45.36619293,-122.5959254,Name + City
+937,Transit POI,Landmarks,TriMet Facility,Center Street Bus Maintenance,SE,4400,,,17th,Ave,Portland,OR,97202,,7651446.749,672442.2678,45.49104886,-122.6475359,Name + City
+952,Residential,Leading Zero Addresses,MAF,,SW,028,,,Porter,St,Portland,OR,97201,,7643991.094,676351.9039,45.50122074,-122.6770096,Full Address
+953,Residential,Leading Zero Addresses,MAF,,SW,0535,,,Vermont,St,Portland,OR,97219,,7644750.589,667149.2421,45.47604582,-122.6730832,Full Address
+956,Residential,Leading Zero Addresses,MAF,,SW,0210,,,Gaines,St,Portland,OR,97239,,7644275.894,674569.1299,45.49635395,-122.675712,Full Address
+970,Residential,Leading Zero Addresses,MAF,,SW,0648,,,Palatine Hill,Rd,Portland,OR,97219,,7644409.676,657040.8671,45.44830625,-122.6733518,Full Address
+971,Residential,Leading Zero Addresses,MAF,,SW,0120,,,Palatine Hill,Rd,Portland,OR,97219,,7643481.961,660908.749,45.45884245,-122.6773715,Full Address
+1053,Transit POI,Bus Stop IDs,Log files - Stop ID,6359,,,,,N Williams & NE Cook,,Portland,OR,97227,6359,,,45.54697182,-122.6665971,Name + City
+1074,Transit POI,Bus Stop IDs,Log files - Stop ID,Stop ID 6359,,,,,N Williams & NE Cook,,Portland,OR,97227,6359,,,45.54697182,-122.6665971,Name + City
+1115,Transit POI,Bus Stop IDs,Log files - Stop ID,TriMet Stop ID 13070,,,,,Wilsonville WES Station,,Wilsonville,OR,97070,13070,,,45.31135755,-122.775303,Name + City
+1116,Anomaly,Locations with Aliases,User Selected,,SE,706,,,Martin Luther King Jr,Blvd,Portland,OR,97214,,,,45.517793,-122.661461,Full Address
+1117,Anomaly,Locations with Aliases,User Selected,,SE,706,,,M L King,Blvd,Portland,OR,97214,,,,45.517793,-122.661461,Full Address
+1118,Anomaly,Locations with Aliases,User Selected,,SE,706,,,MLK,Blvd,Portland,OR,97214,,,,45.517793,-122.661461,Full Address
+1119,Anomaly,Locations with Aliases,User Selected,,SE,4715,,,Cesar Chavez ,Blvd,Portland,OR,97202,,,,45.488877,-122.623336,Full Address
+1120,Anomaly,Locations with Aliases,User Selected,,SE,4715,,,Cesar E Chavez ,Blvd,Portland,OR,97202,,,,45.488877,-122.623336,Full Address
+1121,Anomaly,Locations with Aliases,User Selected,,SE,4715,,,39th,Ave,Portland,OR,97202,,,,45.488877,-122.623336,Full Address
+1136,Business,Venues,FourSquare Check-ins,Casa Italia on Division,SE,3035,,,Division,St,Portland,OR,97202,,,,45.504998,-122.633947,Name + City
+1256,Business,Venues,FourSquare Check-ins,Mississippi Pizza & Atlantis Lounge,N,3552,,,Mississippi,Ave,Portland,OR,97227,,,,45.54857,-122.675262,Name + City
+1484,Residential,Proportional to Population,Open Addresses,,N,6637,,,BORTHWICK,AVE,PORTLAND,OR,97217,,,,45.571068,-122.674095,Full Address
+1584,Anomaly,Misspelled Street,Open Addresses,,N,6637,,,BiRTHWICK,AVE,PORTLAND,OR,97217,,,,45.571068,-122.674095,Full Address
+1655,Anomaly,Wrong Suffix,Open Addresses,,NE,665,,,178TH,HWY,GRESHAM,OR,97230,,,,45.527973,-122.48021,Full Address
+1881,Anomaly,Transposed Street,Open Addresses,,SW,7500,,,SCHloLS FERRY,RD,BEAVERTON,OR,97008,,,,45.46586,-122.77655,Full Address
+1967,Transit POI,Bus Stop IDs,Log files - Stop ID,10117,,,,,Goose Hollow/SW Jefferson St MAX Station,,Portland,OR,,,,,45.51823563,-122.6940894,Name + City
+1968,Transit POI,Bus Stop IDs,Log files - Stop ID,6290,,,,,N Willamette & University of Portland,,Portland,OR,,,,,45.5741141,-122.7239064,Name + City
+2003,Internal Use Only,Renamed Streets,Hillsboro,,NW,3152,,,229th,Ave,Hillsboro,OR,,,,,45.498465,-122.912235,Full Address
+2010,Internal Use Only,Renamed Streets,Hillsboro,,NE,6505,,,Chestnut,St,Hillsboro,OR,,,,,45.52774,-122.914414,Full Address
+2012,Internal Use Only,Vancouver Addresses,Open Addresses,,NW,2719,,,127TH,ST,VANCOUVER,WA,98685,,,,45.7126738,-122.6997071,Full Address
+2020,Internal Use Only,Vancouver Addresses,Open Addresses,,SE,16812,,,1ST,ST,VANCOUVER,WA,98684,,,,45.6232558,-122.4994652,Full Address

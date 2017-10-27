@@ -5,7 +5,7 @@ const Joi = require('joi');
 const arrayObj = Joi.object().keys({
     url: Joi.string(),
     filename: Joi.string().required(),
-    layerId: Joi.string().required().valid('stops', 'landmarks', 'intersections', 'carshare', 'bikeshare', 'hop'),
+    layerId: Joi.string().required(),
     agencyId: Joi.string(),
     agencyName: Joi.string()
 }).requiredKeys('filename', 'layerId');
@@ -17,16 +17,18 @@ const arrayObj = Joi.object().keys({
    feeds: array of objects ... see above (required)
    example:
     "transit": {
-      "datapath": "/mnt/pelias/transit",
+      "datapath": "/data/transit",
       "feeds": [
         {
-          "layerId" : "stops",
-          "filename" : "TRIMET-stops.txt",
-          "agencyId" : "TRIMET",
-          "agencyName" : "TriMet"
+          "layerId": "stops",
+          "url": "http://developer.trimet.org/schedule/gtfs.zip",
+          "filename": "TRIMET-stops.txt",
+          "agencyId": "TRIMET",
+          "agencyName": "TriMet"
         }
       ]
     },
+    ...
 */
 module.exports = Joi.object().keys({
     datapath: Joi.string(),
