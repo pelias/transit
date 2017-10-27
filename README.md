@@ -30,13 +30,20 @@ curl -XGET http://localhost:9200/pelias/_search?pretty=true&q=*:*
 curl -XGET http://localhost:3100/v1/search?text=2
 ```
 
+### To Delete:
+1. curl -XGET 'http://localhost:9200/pelias/_search?q=source:transit&pretty'
+1. might need delete api plugin: https://github.com/pelias/dockerfiles/blob/master/elasticsearch/2.4/Dockerfile
+
 ### docker ... at least to download data
-#####\#INITIAL CHECKOUT
+
+######INITIAL CHECKOUT
+
 1. git clone https://github.com/OpenTransitTools/pelias.transit.loader.git
 1. cd pelias.transit.loader
 1. git update-index --no-assume-unchanged pelias.json
 1. git update-index --assume-unchanged pelias.json
-#####\#DOWNLOAD DATA
+
+######DOWNLOAD DATA
 1. export DATA_DIR=/data
 1. rm -rf $DATA_DIR/transit
 1. docker rmi -f pelias_transit
