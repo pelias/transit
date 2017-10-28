@@ -57,4 +57,4 @@ curl -XGET http://localhost:3100/v1/search?text=2
 
 #### Docker
 
-1. [pelias.transit.loader](https://hub.docker.com/r/opentransittools/pelias.transit.loader) docker image on Docker Hub
+1. [pelias.transit.loader](https://hub.docker.com/r/opentransittools/pelias.transit.loader/builds/) docker image on Docker Hub
