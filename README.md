@@ -44,6 +44,7 @@ curl -XGET http://localhost:3100/v1/search?text=2
 1. git update-index --assume-unchanged pelias.json
 
 ######DOWNLOAD DATA
+
 1. export DATA_DIR=/data
 1. rm -rf $DATA_DIR/transit
 1. docker rmi -f pelias_transit
@@ -52,3 +53,8 @@ curl -XGET http://localhost:3100/v1/search?text=2
 1. docker images
 1. docker run -i -v $DATA_DIR:/data -t pelias_transit npm run download
 1. ls /data/transit
+
+
+#### Docker
+
+1. [pelias.transit.loader](https://hub.docker.com/r/opentransittools/pelias.transit.loader) docker image on Docker Hub
