@@ -6,6 +6,7 @@ const arrayObj = Joi.object().keys({
     url: Joi.string(),
     filename: Joi.string().required(),
     layerId: Joi.string().required(),
+    layerName: Joi.string(),
     agencyId: Joi.string(),
     agencyName: Joi.string()
 }).requiredKeys('filename', 'layerId');
