@@ -48,68 +48,78 @@
           "url": "./test/landmarks.csv",
           "filename": "landmarks.csv",
           "agencyId": "TRIMET",
-          "agencyName": "TriMet"
+          "agencyName": "TriMet",
+          "layerName": "landmark"
         },
         {
           "layerId": "intersections",
           "url": "./test/intersections.csv",
-          "filename": "intersections.csv"
+          "filename": "intersections.csv",
+          "layerName": "Intersections"
         },
         {
           "layerId": "bikeshare",
           "url": "http://biketownpdx.socialbicycles.com/opendata/station_information.json",
           "filename": "BIKETOWN-hubs.json",
           "agencyId": "BIKETOWN",
-          "agencyName": "BIKETOWN"
+          "agencyName": "BIKETOWN",
+          "layerName": "bikeshare"
         },
         {
           "layerId": "stops",
           "url": "http://developer.trimet.org/schedule/gtfs.zip",
           "filename": "TRIMET-stops.txt",
           "agencyId": "TRIMET",
-          "agencyName": "TriMet"
+          "agencyName": "TriMet",
+          "layerName": "Stop"
         },
         {
           "layerId": "stops",
           "url": "http://www.c-tran.com/images/Google/GoogleTransitUpload.zip",
           "filename": "C-TRAN-stops.txt",
           "agencyId": "C-TRAN",
-          "agencyName": "C-TRAN"
+          "agencyName": "C-TRAN",
+          "layerName": "Stop"
         },
         {
           "layerId": "stops",
           "url": "http://oregon-gtfs.com/gtfs_data/rideconnection-or-us/rideconnection-or-us.zip",
           "filename": "RIDECONNECTION-stops.txt",
           "agencyId": "RIDECONNECTION",
-          "agencyName": "Ride Connection"
+          "agencyName": "Ride Connection",
+          "layerName": "Stop"
         },
         {
           "layerId": "stops",
           "url": "http://cherriots.org/developer/gtfs.zip",
           "filename": "CHERRIOTS-stops.txt",
           "agencyId": "CHERRIOTS",
-          "agencyName": "Cherriots / Salem-Keizer Transit"
+          "agencyName": "Cherriots",
+          "layerName": "Stop"
         },
         {
           "layerId": "stops",
           "url": "http://oregon-gtfs.com/gtfs_data/sandy-or-us/sandy-or-us.zip",
           "filename": "SAM-stops.txt",
           "agencyId": "SAM",
-          "agencyName": "Sandy Area Metro"
+          "agencyName": "SAM",
+          "layerName": "Stop"
         },
         {
           "layerId": "stops",
           "url": "http://data.trilliumtransit.com/gtfs/wilsonville-or-us/wilsonville-or-us.zip",
           "filename": "SMART-stops.txt",
           "agencyId": "SMART",
-          "agencyName": "SMART"
+          "agencyName": "SMART",
+          "layerName": "Stop"
         },
         {
           "layerId": "stops",
           "url": "http://oregon-gtfs.com/gtfs_data/swanisland-or-us/swanisland-or-us.zip",
           "filename": "SWAN-stops.txt",
           "agencyId": "SWAN",
-          "agencyName": "Swan Island Evening Shuttle Service"
+          "agencyName": "Swan Island",
+          "layerName": "Stop"
         }
       ]
     },
