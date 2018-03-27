@@ -1,3 +1,6 @@
+> note: this repository is currently in the process of being migrated from the OpenTransitTools organization in to the Pelias org.
+> During this time some of the documentation and workflows may be changed in order to bring it more in common with other repositories under the pelias org.
+
 # pelias.transit.loader
 Load transit landmarks, stops and street intersections into the Pelias geocoder.
 
@@ -21,7 +24,7 @@ curl -XGET http://localhost:9200/pelias/_search?pretty=true&q=name.default:*SMAR
 
 ##### note: you might need to set an env var to find pelis.json (if you keep getting 'transit' not in your schema errors, try the following):
 export PELIAS_CONFIG=${PWD#/cygdrive/c}/pelias.json
- 
+
  -or-
 
 $Env:PELIAS_CONFIG="$(pwd)\pelias.json"
