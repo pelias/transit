@@ -1,26 +1,29 @@
 # base image
 FROM pelias/baseimage
 
-# downloader apt dependencies
+# maintainer information
+LABEL maintainer="pelias.team@gmail.com"
+
+# downloade apt dependencies
 # note: this is done in one command in order to keep down the size of intermediate containers
 RUN apt-get update && apt-get install -y bzip2 && apt-get install -y unzip && rm -rf /var/lib/apt/lists/*
 
-# clone repo
-RUN git clone https://github.com/OpenTransitTools/pelias.transit.loader /code/pelias/transit
+# Where the app is built and run inside the docker fs
+RUN useradd -ms /bin/bash pelias
+ENV WORK='/home/pelias'
+WORKDIR ${WORK}
 
-# change working dir
-WORKDIR /code/pelias/transit
-
-# consume the build variables
-ARG REVISION=master
+# copy package.json first to prevent npm install being rerun when only code changes
+COPY ./package.json ${WORK}
 
 # install npm dependencies
 RUN npm install
 
-# run tests
-# TODO RUN npm test
+# copy files to container
+COPY . ${WORK}
 
-# hope we pull in the local pelias.json and also list find where the local data will reside (ala /data directory)
-VOLUME "/data"
-ADD 'pelias.json' '/code/pelias.json'
-ENV PELIAS_CONFIG '/code/pelias.json'
+# set location of pelias.json
+ENV PELIAS_CONFIG "${WORK}/pelias.json"
+
+# only allow containers to succeed if tests pass
+RUN npm test
