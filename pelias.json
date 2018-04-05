@@ -4,6 +4,9 @@
     "timestamp": false
   },
   "imports": {
+    "whosonfirst": {
+      "datapath": "/data/whosonfirst"
+    },
     "transit": {
       "datapath": "/data/transit",
       "feeds": [
