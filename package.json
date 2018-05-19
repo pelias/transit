@@ -49,5 +49,9 @@
     "prune",
     "validate",
     "test"
-  ]
+  ],
+  "release": {
+    "branch": "production",
+    "success": []
+  }
 }
