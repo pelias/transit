@@ -1,6 +1,6 @@
 {
   "name": "pelias-transit",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Import Stops, Intersections, P&Rs, TCs, TVMs and other landmark data related to transit, etc...",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,6 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
-    "npm-check": "git://github.com/orangejulius/npm-check.git#disable-update-check",
     "precommit-hook": "^3.0.0",
     "semantic-release": "^15.1.4"
   },
@@ -49,7 +48,10 @@
     "lint",
     "prune",
     "validate",
-    "test",
-    "check-dependencies"
-  ]
+    "test"
+  ],
+  "release": {
+    "branch": "production",
+    "success": []
+  }
 }
