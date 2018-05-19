@@ -1,6 +1,6 @@
 {
   "name": "pelias-transit",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Import Stops, Intersections, P&Rs, TCs, TVMs and other landmark data related to transit, etc...",
   "main": "index.js",
   "scripts": {
