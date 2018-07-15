@@ -1,5 +1,9 @@
-> note: this repository is currently in the process of being migrated from the OpenTransitTools organization in to the Pelias org.
-> During this time some of the documentation and workflows may be changed in order to bring it more in common with other repositories under the pelias org.
+>This repository is part of the [Pelias](https://github.com/pelias/pelias)
+>project. Pelias is an open-source, open-data geocoder originally sponsored by
+>[Mapzen](https://www.mapzen.com/). Our official user documentation is
+>[here](https://github.com/pelias/documentation).
+
+**Note**: this repository is currently in the process of being migrated from the OpenTransitTools organization in to the Pelias org  During this time some of the documentation and workflows may be changed in order to bring it more in common with other repositories under the pelias org.
 
 # pelias.transit.loader
 Load transit landmarks, stops and street intersections into the Pelias geocoder.
