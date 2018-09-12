@@ -9,11 +9,12 @@ RUN apt-get update && apt-get install -y bzip2 unzip && rm -rf /var/lib/apt/list
 ENV WORKDIR /code/pelias/transit
 WORKDIR ${WORKDIR}
 
+# copy package.json first to prevent npm install being rerun when only code changes
+COPY ./package.json ${WORKDIR}
+RUN npm install
+
 # add local code
 ADD . ${WORKDIR}
-
-# install npm dependencies
-RUN npm install
 
 # run tests
 RUN npm test
