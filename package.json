@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./bin/start",
     "test": "./bin/test",
-    "download": "node lib/prep_data.js",
+    "download": "./bin/download",
     "lint": "jshint .",
     "travis": "npm test",
     "validate": "npm ls"
