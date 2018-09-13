@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "test": "./bin/test",
     "download": "node lib/prep_data.js",
     "lint": "jshint .",
-    "travis": "true",
+    "travis": "npm test",
     "validate": "npm ls"
   },
   "author": "fpurcell",
