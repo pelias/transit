@@ -4,9 +4,9 @@
   "description": "Import Stops, Intersections, P&Rs, TCs, TVMs and other landmark data related to transit, etc...",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "./bin/start",
     "test": "./bin/test",
-    "download": "node lib/prep_data.js",
+    "download": "./bin/download",
     "lint": "jshint .",
     "travis": "npm test",
     "validate": "npm ls"
