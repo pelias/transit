@@ -4,9 +4,11 @@
   "description": "Import Stops, Intersections, P&Rs, TCs, TVMs and other landmark data related to transit, etc...",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "download": "node lib/prep_data.js",
+    "start": "./bin/start",
+    "test": "./bin/test",
+    "download": "./bin/download",
     "lint": "jshint .",
+    "travis": "npm test",
     "validate": "npm ls"
   },
   "author": "fpurcell",
@@ -28,8 +30,7 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
-    "precommit-hook": "^3.0.0",
-    "semantic-release": "^15.1.4"
+    "precommit-hook": "^3.0.0"
   },
   "repository": {
     "type": "git",
