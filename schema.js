@@ -33,5 +33,5 @@ const arrayObj = Joi.object().keys({
 */
 module.exports = Joi.object().keys({
   datapath: Joi.string(),
-  feeds: Joi.array().min(1).items(arrayObj),
-}).requiredKeys('datapath', 'feeds');
+  feeds: Joi.array().items(arrayObj)
+}).requiredKeys('datapath');
