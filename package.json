@@ -50,7 +50,6 @@
   "homepage": "https://github.com/pelias/transit",
   "pre-commit": [
     "lint",
-    "prune",
     "validate",
     "test"
   ],
