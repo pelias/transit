@@ -32,6 +32,9 @@
   "devDependencies": {
     "precommit-hook": "^3.0.0"
   },
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/pelias/transit.git"
@@ -47,12 +50,11 @@
   "homepage": "https://github.com/pelias/transit",
   "pre-commit": [
     "lint",
-    "prune",
     "validate",
     "test"
   ],
   "release": {
-    "branch": "production",
+    "branch": "master",
     "success": []
   }
 }
