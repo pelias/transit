@@ -111,6 +111,32 @@ module.exports.tests.generateName = function(test, common) {
     t.equals(actual, 'test (Acme Stop)');
     t.end();
   });
+
+  // altname
+  test('generateName: altname included', function(t) {
+    var actual = stops.generateName({
+      stop_name: 'Stop Name',
+      stop_code: 'Alt Name'
+    }, 'Acme');
+    t.equals(actual, 'Stop Name (Acme Stop ID Alt Name)');
+    t.end();
+  });
+  test('generateName: altname not included if duplicate of name', function(t) {
+    var actual = stops.generateName({
+      stop_name: 'Testing 123',
+      stop_code: 'Testing 123'
+    }, 'Acme');
+    t.equals(actual, 'Testing 123 (Acme Stop)');
+    t.end();
+  });
+  test('generateName: altname not included if duplicate of name - complex case', function(t) {
+    var actual = stops.generateName({
+      stop_name: '23300 Block NE Halsey',
+      stop_code: '2330'
+    }, 'Acme');
+    t.equals(actual, '23300 Block NE Halsey (Acme Stop ID 2330)');
+    t.end();
+  });
 };
 
 module.exports.all = function (tape, common) {
