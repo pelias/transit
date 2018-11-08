@@ -7,7 +7,7 @@ node_js:
   - 10
 matrix:
   fast_finish: true
-script: npm run travis
+script: ./bin/test
 before_install:
   - npm i -g npm
 branches:
