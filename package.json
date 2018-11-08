@@ -30,7 +30,9 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
-    "precommit-hook": "^3.0.0"
+    "precommit-hook": "^3.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   },
   "engines": {
     "node": ">=8.0.0"

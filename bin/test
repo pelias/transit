@@ -4,4 +4,4 @@
 # see https://github.com/pelias/pelias/issues/744
 set -o pipefail
 
-exec true
+NODE_ENV=test node test/run.js | npx tap-spec
