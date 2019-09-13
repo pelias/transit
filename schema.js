@@ -1,5 +1,4 @@
-const Joi = require('joi');
-
+const Joi = require('@hapi/joi');
 
 const arrayObj = Joi.object().keys({
   url: Joi.string(),
