@@ -1,5 +1,3 @@
-'use strict';
-
 const utils = require('./lib/utils');
 const loader = require('./lib/loader');
 
