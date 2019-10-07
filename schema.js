@@ -7,7 +7,7 @@ const arrayObj = Joi.object().keys({
   layerName: Joi.string(),
   agencyId: Joi.string(),
   agencyName: Joi.string()
-}).requiredKeys('filename', 'layerId');
+});
 
 
 /** Schema Configuration
@@ -30,6 +30,6 @@ const arrayObj = Joi.object().keys({
   ...
 */
 module.exports = Joi.object().keys({
-  datapath: Joi.string(),
+  datapath: Joi.string().required(),
   feeds: Joi.array().items(arrayObj)
-}).requiredKeys('datapath');
+});

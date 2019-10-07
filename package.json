@@ -19,7 +19,7 @@
     "combined-stream": "1.0.8",
     "csv-parse": "^4.4.5",
     "decompress": "^4.0.0",
-    "@hapi/joi": "^15.0.0",
+    "@hapi/joi": "^16.1.0",
     "lodash": "^4.16.0",
     "pelias-config": "^4.1.0",
     "pelias-dbclient": "^2.8.0",
