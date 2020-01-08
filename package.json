@@ -21,7 +21,7 @@
     "csv-parse": "^4.4.5",
     "decompress": "^4.0.0",
     "lodash": "^4.16.0",
-    "pelias-config": "^4.5.0",
+    "pelias-config": "^4.8.0",
     "pelias-dbclient": "^2.13.0",
     "pelias-logger": "^1.4.1",
     "pelias-model": "^7.1.0",
