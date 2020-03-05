@@ -1,5 +1,6 @@
 
 const stops = require('../../lib/stops');
+const model = require('pelias-model');
 module.exports.tests = {};
 
 // test exports
@@ -136,6 +137,29 @@ module.exports.tests.generateName = function(test, common) {
     }, 'Acme');
     t.equals(actual, '23300 Block NE Halsey (Acme Stop ID 2330)');
     t.end();
+  });
+};
+
+module.exports.tests.generateRecordXform = (test) => {
+  test('generateRecordXform: do not set agencyName or agencyId as name aliases', t => {
+    const func = stops.generateRecordXform('example_agency_id', 'example_agency_name', 'example_layer_name');
+    const rec = {
+      stop_id: 'example_stop_id',
+      stop_code: 'example_stop_code',
+      stop_lat: 1.1,
+      stop_lon: 2.2
+    };
+    func(rec, undefined, (err, doc) => {
+      t.false(err);
+      t.true(doc instanceof model.Document, 'instance of pelias model');
+      t.deepEquals(doc.name.default, [
+        'example_agency_name example_layer_name',
+        'example_stop_code',
+        'Stop example_stop_code',
+        'example_stop_code stop'
+      ]);
+      t.end();
+    });
   });
 };
 
