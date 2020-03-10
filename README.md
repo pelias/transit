@@ -26,7 +26,7 @@ curl -XGET http://localhost:3100/v1/search?text=2
 curl -XGET http://localhost:9200/pelias/_search?pretty=true&q=name.default:*SMART%20Stop*
 ```
 
-##### note: you might need to set an env var to find pelis.json (if you keep getting 'transit' not in your schema errors, try the following):
+##### note: you might need to set an env var to find pelias.json (if you keep getting 'transit' not in your schema errors, try the following):
 export PELIAS_CONFIG=${PWD#/cygdrive/c}/pelias.json
 
  -or-
