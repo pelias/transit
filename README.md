@@ -8,7 +8,7 @@
 # pelias.transit.loader
 Load transit landmarks, stops and street intersections into the Pelias geocoder.
 
-#### Setup empty ES index via MapZen's pelias/schema project
+#### Setup empty ES index via pelias/schema project
 ```javascript
 cd /srv/pelias_loader/projects/schema
 curl -XDELETE 'localhost:9200/pelias?pretty'
