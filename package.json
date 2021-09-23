@@ -8,7 +8,7 @@
     "test": "./bin/test",
     "download": "./bin/download",
     "lint": "jshint .",
-    "travis": "npm test",
+    "ci": "npm test",
     "validate": "npm ls"
   },
   "author": "fpurcell",
