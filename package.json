@@ -15,7 +15,7 @@
   "attribution": "code based off of Delaware Schools from trescube https://github.com/trescube/delaware-schools-pelias-importer, as well as other Pelias loader projects",
   "license": "MPL-2.0",
   "dependencies": {
-    "@hapi/joi": "^16.1.0",
+    "@hapi/joi": "^17.0.2",
     "JSONStream": "^1.3.1",
     "combined-stream": "1.0.8",
     "csv-parse": "^4.4.5",
